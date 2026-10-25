@@ -135,7 +135,10 @@ python -m http.server 8000
 <br/>
 
 <a href="mailto:kaileyventures@zohomail.in">
-  <img src="https://img.shields.io/badge/Contact_Me-hi@yallah.habibi-ff4d2e?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <img src="https://img.shields.io/badge/Email_Me-If_You_Dare-ff4d2e?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+<a href="https://t.me/YallahHabibi" target="_blank">
+  <img src="https://img.shields.io/badge/Telegram-Slide_Into_DMs-24A1DE?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
 </a>
 
 <br/><br/>
