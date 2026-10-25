@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1d1033">
+<title>Yallah Habibi · The person behind that tiny footer text</title>
+<meta name="description" content="Yallah Habibi, developer. Yes, the one whose name you just clicked in a footer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true"><span>BREAKING: you clicked a footer link &nbsp;•&nbsp; Scientists are stunned &nbsp;•&nbsp; Bugs are "features" &nbsp;•&nbsp; Works on my machine &nbsp;•&nbsp; BREAKING: you clicked a footer link &nbsp;•&nbsp; Scientists are stunned &nbsp;•&nbsp; Bugs are "features" &nbsp;•&nbsp; Works on my machine &nbsp;•&nbsp;</span></div>
+
+<header class="hero">
+  <p class="note">hi. yes. the footer guy.</p>
+  <h1 id="logo" title="Go on, click it">Yallah<br>Habibi</h1>
+  <p class="sub">Vibe-coder. I made the website you just came from, and the tiny text that brought you here. No degree, no bootcamp, no fear. Just a prompt, a dream, and a suspicious number of open tabs. Thank you for noticing. Genuinely. Nobody does.</p>
+  <div class="cta">
+    <a class="btn yes" href="#contact">Hire me</a>
+    <button class="btn no" id="runaway" type="button">Don't hire me</button>
+  </div>
+  <p class="tiny" id="runmsg">(the second button is shy)</p>
+  <p class="tiny">Bugs squashed: <b id="bugs">0</b> <span id="bugmsg">(a bug is crawling around. Go get it.)</span></p>
+</header>
+
+<section class="block vibe" id="method">
+  <h2>My method <small>(it has a name: vibes)</small></h2>
+  <p class="lead">I'm not a "professional developer". I'm worse for your excuses: I'm a <b>builder</b>. If it exists in my head, it exists on the internet by sunrise. Time? Irrelevant. Sleep? Optional. Stack Overflow? We're on a first-name basis.</p>
+  <ol class="steps">
+    <li><b>Idea arrives.</b> Usually at 2 AM. Always "this will take an hour."</li>
+    <li><b>Vibes get typed in.</b> Clear prompts, strong opinions, zero fear.</li>
+    <li><b>Something appears.</b> It's beautiful. It's also on fire. Both are fine.</li>
+    <li><b>Fix. Test. Fix again.</b> Not quitting is a technical skill. Look it up.</li>
+    <li><b>Ship it.</b> It works. Don't ask me to explain every line. Nobody asks Picasso for his brush settings.</li>
+  </ol>
+  <div class="vibebox">
+    <p>Ask me to build anything:</p>
+    <div class="row"><input id="ask" type="text" maxlength="60" placeholder="e.g. Uber for goats" aria-label="What should Yallah build?"><button type="button" id="askbtn">Vibe it</button></div>
+    <p class="answer" id="vibeans" aria-live="polite">Type something. I don't know what a "feasibility study" is.</p>
+  </div>
+  <p class="tiny">Fun fact: Every "senior engineer" once copy-pasted something they didn't understand. I just do it faster, and with better lighting.</p>
+</section>
+
+<section class="block skills">
+  <h2>Skills <small>(mostly my team)</small></h2>
+  <p class="formula">Skill = 10% what I know + 90% who I ask. Math checks out. Barely.</p>
+  <div class="bar"><b>HTML</b><i style="--w:20%"></i><em>20%. I know it starts with &lt; and ends with &gt;. The AI handles everything in between</em></div>
+  <div class="bar"><b>CSS</b><i style="--w:15%"></i><em>15%. I can say "make it pop" in 40 different ways. That counts</em></div>
+  <div class="bar"><b>JavaScript</b><i style="--w:10%"></i><em>10%. I can spot a semicolon at 50 metres. Beyond that, we pray</em></div>
+  <div class="bar"><b>React</b><i style="--w:8%"></i><em>8%. I know it's a library, not a lifestyle. Still shipping it</em></div>
+  <div class="bar"><b>Whatever's trending</b><i style="--w:5%"></i><em>5%. If it has a logo and a landing page, I've pasted it into something</em></div>
+  <div class="bar"><b>Knowing who to ask</b><i style="--w:120%"></i><em>120%. The only skill that matters. Overflows, like my browser tabs</em></div>
+
+  <h3 class="teamh">The team <small>(17 agents, 0 salaries, 0 meetings)</small></h3>
+  <div class="team">
+    <div class="agent"><span class="ico" title="Trophy. For the credit I took."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 8h20v12a10 10 0 0 1-20 0z" class="f"/><path d="M14 12H6c0 8 4 11 9 11M34 12h8c0 8-4 11-9 11M24 30v8M16 40h16"/></svg></span><b>Claude</b><p>Does the thinking. I take the credit.</p></div>
+    <div class="agent"><span class="ico" title="Twins. Always agree. Never."><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="24" r="12" class="f"/><circle cx="30" cy="24" r="12"/></svg></span><b>Gemini</b><p>Second opinion when Claude says "that's a bad idea".</p></div>
+    <div class="agent"><span class="ico" title="Terminal. Looks hacker-ish. I only watch."><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="8" width="38" height="32" rx="3" class="f"/><path d="M13 20l7 5-7 5M24 32h10"/></svg></span><b>Codex</b><p>Writes code at 3 AM. Never complains.</p></div>
+    <div class="agent"><span class="ico" title="Magnifier. Used 400 times today."><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="20" r="12" class="f"/><path d="M29 29l12 12"/></svg></span><b>Googling</b><p>Oldest colleague. Still undefeated.</p></div>
+    <div class="agent"><span class="ico" title="Stacked pages. None fully read."><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="14" width="26" height="26" class="f"/><path d="M14 8h26v26M12 22h14M12 28h14"/></svg></span><b>Research</b><p>Fifteen tabs open. Zero regrets.</p></div>
+    <div class="agent"><span class="ico" title="Typing bubble. Still typing. Always."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 10h36v22H20l-9 8v-8H6z" class="f"/><path d="M16 21h.01M24 21h.01M32 21h.01" stroke-width="5"/></svg></span><b>ChatGPT</b><p>The one my mom has heard of. Solid, chatty, occasionally confidently wrong.</p></div>
+    <div class="agent"><span class="ico" title="Paper plane. Flies the code, I get the miles."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 22L43 6 31 42 23 28z" class="f"/><path d="M23 28L43 6"/></svg></span><b>Copilot</b><p>Finishes my sentences. And my code. And sometimes my bugs.</p></div>
+    <div class="agent"><span class="ico" title="A cursor. Obvious joke, taken."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 6l28 14-12 4-4 12z" class="f"/><path d="M26 26l10 12"/></svg></span><b>Cursor</b><p>Edits ten files while I watch like a proud parent.</p></div>
+    <div class="agent"><span class="ico" title="Sailboat. I am the one in the water."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v26L10 32z" class="f"/><path d="M4 40q5-5 10 0t10 0 10 0 10 0M24 6l12 26H24"/></svg></span><b>Windsurf</b><p>Rides the code waves so I don't drown.</p></div>
+    <div class="agent"><span class="ico" title="Open book. Open to page 1 only."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 12c-5-4-12-4-18-2v28c6-2 13-2 18 2 5-4 12-4 18-2V10c-6-2-13-2-18 2zM24 12v28" class="f"/></svg></span><b>Perplexity</b><p>Googling, but with footnotes. Feels academic.</p></div>
+    <div class="agent"><span class="ico" title="A spiral. Thinks, I spiral too."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 24c2-2 5 0 4 3s-6 5-10 2-3-11 3-14 14-1 17 6" class="f"/></svg></span><b>DeepSeek</b><p>Thinks out loud for 4 minutes. Worth it.</p></div>
+    <div class="agent"><span class="ico" title="Lightning. Fast, loud, occasionally on fire."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M28 4L10 28h12l-4 16 20-26H26z" class="f"/></svg></span><b>Grok</b><p>Answers at 3 AM with attitude. Same energy as me.</p></div>
+    <div class="agent"><span class="ico" title="Browser window. Nothing to install, no excuses."><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="8" width="38" height="32" rx="3" class="f"/><path d="M5 17h38M20 24l10 6-10 6z"/></svg></span><b>Replit</b><p>Runs my code in a browser so I never install anything.</p></div>
+    <div class="agent"><span class="ico" title="Picture frame. Looks expensive."><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="32" class="f"/><circle cx="16" cy="19" r="3"/><path d="M6 36l12-12 8 8 6-6 10 10"/></svg></span><b>Midjourney</b><p>Makes the pictures. I say 'make it more cinematic'.</p></div>
+    <div class="agent"><span class="ico" title="Crooked stack. Like my confidence."><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="34" width="32" height="6" class="f"/><rect x="10" y="24" width="28" height="6"/><rect x="12" y="14" width="26" height="6" transform="rotate(-8 24 17)" class="f"/></svg></span><b>Stack Overflow</b><p>Closed my question as a duplicate. Still love it.</p></div>
+    <div class="agent"><span class="ico" title="Sparkle. Because it is new and shiny."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4c2 12 8 18 20 20-12 2-18 8-20 20-2-12-8-18-20-20 12-2 18-8 20-20z" class="f"/></svg></span><b>Muse</b><p>Meta's brand-new one. Fresh out of the box, already on my payroll (it's free).</p></div>
+    <div class="agent"><span class="ico" title="Cup. The real senior engineer."><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 16h24v14a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" class="f"/><path d="M32 20h4a4 4 0 0 1 0 8h-4M14 6c0 3 3 3 0 6M22 6c0 3 3 3 0 6"/></svg></span><b>Coffee</b><p>The only one on the payroll.</p></div>
+  </div>
+</section>
+
+<section class="block quotes">
+  <h2>Things developers say <small>(me, mostly)</small></h2>
+  <ul>
+    <li>"It works on my machine."</li>
+    <li>"Quick fix, five minutes." <span>(three days ago)</span></li>
+    <li>"I'll write the docs later."</li>
+    <li>"Who wrote this code?" <span>(git blame: me)</span></li>
+  </ul>
+</section>
+
+<section class="block est">
+  <h2>How long will your project take?</h2>
+  <p>Select your project. I will lie confidently.</p>
+  <div class="pick">
+    <button type="button" data-t="A landing page: 'one hour'. Reality: 3 days, 2 coffees lost, 1 existential crisis.">Landing page</button>
+    <button type="button" data-t="Fix one small bug: 'two minutes'. Reality: it summons four new bugs.">Tiny bug fix</button>
+    <button type="button" data-t="Full e-commerce site: 'two weeks'. Reality: ask me again in spring.">Online shop</button>
+    <button type="button" data-t="Make the logo bigger: done before you finish the sentence. This is the only true estimate.">Bigger logo</button>
+  </div>
+  <p class="answer" id="answer" aria-live="polite">Waiting for you to pick something...</p>
+</section>
+
+<section class="block stats">
+  <h2>Numbers <small>(100% trust me)</small></h2>
+  <div class="grid">
+    <div><strong data-n="40000">0</strong><span>lines shipped</span></div>
+    <div><strong data-n="12">0</strong><span>lines I understand</span></div>
+    <div><strong data-n="9999">0</strong><span>prompts typed</span></div>
+    <div><strong data-n="0">0</strong><span>apologies to my code</span></div>
+  </div>
+</section>
+
+<section class="block seen">
+  <h2>As seen on</h2>
+  <p class="logos"><span>My Mom's WhatsApp Status</span><span>localhost:3000</span><span>One (1) Browser Tab</span><span>A Friend's Phone, Under Pressure</span><span>The Footer You Just Clicked</span></p>
+</section>
+
+<section class="block love">
+  <h2>What people say <small>(unpaid, unverified)</small></h2>
+  <blockquote>"He built my site overnight. I still don't know how, and neither does he." <cite>A satisfied client, probably</cite></blockquote>
+  <blockquote>"Beta tested by his own mother. Rated 5/5 out of pity." <cite>Mom</cite></blockquote>
+  <blockquote>"The bugs are weirdly charming." <cite>Someone being very polite</cite></blockquote>
+  <blockquote>"Wait, you did all this without a degree?" <cite>Everyone, then silence</cite></blockquote>
+</section>
+
+<section class="block terms">
+  <h2>Terms &amp; Conditions <small>(nobody reads these, you will)</small></h2>
+  <details><summary>1. Deadlines</summary><p>Deadlines are emotional support for the client. Delivery happens when the vibes align.</p></details>
+  <details><summary>2. Bugs</summary><p>Any bug found is a surprise feature. Any feature that breaks is a bug in your browser.</p></details>
+  <details><summary>3. Revisions</summary><p>Unlimited revisions, limited patience. Each "one small change" costs one coffee.</p></details>
+  <details><summary>4. Credit</summary><p>The AI team gets zero credit and ten thousand thanks. I get the invoice.</p></details>
+  <details><summary>5. Refunds</summary><p>If you don't love it, I will build it again. Louder.</p></details>
+</section>
+
+<section class="block" id="contact">
+  <h2>Contact <small>(go on, brave one)</small></h2>
+  <p>Email me like a normal human: <a class="mail" href="mailto:kaileyventures@zohomail.in">hi@yallah.habibi</a></p>
+  <p class="tiny">Replies within 24 hours. Or 24 days. Time is a flat circle and so is my inbox.</p>
+</section>
+
+<footer>
+  <p>You scrolled all the way down here. That's a footer.<br>This page is also somebody's footer. Meta.</p>
+  <p class="tiny">© <span id="yr"></span><script>document.getElementById("yr").textContent=new Date().getFullYear();</script> Yallah Habibi. No cookies, no tracking, no clue.</p>
+  <a href="#" id="top">Take me back up, I'm scared</a>
+</footer>
+
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie notice">
+  <p>🍪 This site uses zero cookies. Here, have a fake one anyway.</p>
+  <button type="button" id="eat">Eat cookie</button>
+  <button type="button" id="eat2">Eat it sadder</button>
+</div>
+<p class="tiny hint">Psst. Try the Konami code: ↑ ↑ ↓ ↓ ← → ← → B A</p>
+
+<script src="script.js"></script>
+</body>
+</html>
