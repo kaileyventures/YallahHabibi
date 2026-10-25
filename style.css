@@ -50,7 +50,15 @@ h1.spin{animation:spin .8s ease}
 .pick button:hover,.pick button.sel{background:var(--mustard)}
 .answer{font-family:'Caveat',cursive;font-size:1.7rem;line-height:1.2;min-height:4.2rem}
 
-.mail{font-weight:700;background:var(--pink);padding:0 .3rem}
+.mail{font-weight:700;background:var(--pink);padding:0 .3rem;display:inline-block;border:2px solid var(--ink);text-decoration:none;box-shadow:3px 3px 0 var(--ink);margin:0.2rem 0;transition:transform .1s,box-shadow .1s}
+.mail:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.mail.tele{background:var(--mint)}
+
+.contact-card{background:var(--paper);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:1rem;margin:1rem 0;position:relative}
+.contact-card p{font-weight:700;margin:0.2rem 0}
+.contact-card small{display:block;font-size:0.85rem;opacity:0.8;font-style:italic;margin-top:0.4rem}
+.contact-card .tag{display:inline-block;font-size:0.7rem;font-weight:700;background:var(--mustard);border:2px solid var(--ink);padding:0.1rem 0.4rem;box-shadow:2px 2px 0 var(--ink);letter-spacing:0.05em}
+.contact-card .tag.hot{background:var(--red);color:#fff}
 
 footer{background:var(--ink);color:var(--paper);text-align:center;padding:3rem 1.25rem 4rem;margin-top:4rem}
 footer p{margin-bottom:.8rem}
