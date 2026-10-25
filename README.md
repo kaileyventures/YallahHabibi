@@ -86,11 +86,11 @@ I'm not a "Software Architect". I'm worse: I'm a **builder**. If an idea strikes
  ┌──────────────────────────────────────────────────────────┐
  │  METRIC                       │ COUNT                    │
  ├───────────────────────────────┼──────────────────────────┤
- │  Lines of code shipped        │ 40,000+                  │
- │  Lines of code understood     │ ~12                      │
- │  Prompts typed                │ 9,999+                   │
- │  Apologies to browser console │ 0                        │
- │  Confidence                   │ 120% (Math checks out)   │
+ │  Lines copy-pasted blind      │ 40,000+                  │
+ │  Unit tests written           │ 0 (We test in prod)      │
+ │  Cries for help sent to AI    │ 9,999+                   │
+ │  Clue why the code compiles   │ 0                        │
+ │  Math accuracy                │ 100% (Audited by vibes)  │
  └──────────────────────────────────────────────────────────┘
 ```
 
