@@ -60,11 +60,21 @@ h1.spin{animation:spin .8s ease}
 .contact-card .tag{display:inline-block;font-size:0.7rem;font-weight:700;background:var(--mustard);border:2px solid var(--ink);padding:0.1rem 0.4rem;box-shadow:2px 2px 0 var(--ink);letter-spacing:0.05em}
 .contact-card .tag.hot{background:var(--red);color:#fff}
 
-footer{background:var(--ink);color:var(--paper);text-align:center;padding:3rem 1.25rem 4rem;margin-top:4rem}
-footer p{margin-bottom:.8rem}
-footer a{color:var(--mustard);font-weight:700;display:inline-block;margin-top:1rem}
-footer a.shake{animation:shake .4s infinite}
-@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+footer{background:var(--ink);color:var(--paper);text-align:center;padding:3.5rem 1.25rem 4rem;margin-top:4rem;border-top:5px solid var(--mustard)}
+.footer-badge{display:inline-block;background:var(--red);color:#fff;font-family:'Bowlby One',sans-serif;font-size:0.9rem;padding:0.4rem 0.9rem;border:2px solid var(--paper);box-shadow:4px 4px 0 var(--pink);margin-bottom:1.2rem;letter-spacing:0.05em;transform:rotate(-1deg)}
+.footer-big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.2rem,3vw,1.5rem);max-width:38rem;margin:0 auto 2rem;color:var(--mustard);line-height:1.35}
+.footer-roast-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem;max-width:48rem;margin:0 auto 2.5rem;text-align:left}
+.f-item{background:#2a1847;border:2px solid var(--mustard);padding:0.8rem 1rem;box-shadow:4px 4px 0 var(--pink)}
+.f-item span{display:block;font-size:0.8rem;font-weight:700;color:var(--mint);text-transform:uppercase;letter-spacing:0.05em}
+.f-item p{margin:0.3rem 0 0;font-size:0.95rem;color:var(--paper);line-height:1.3}
+.f-disclaimer{max-width:40rem;margin:1.5rem auto 1rem;padding:0.8rem;border:2px dashed var(--mint);background:rgba(110,242,193,0.06);font-size:0.82rem;line-height:1.5}
+.f-copy{opacity:0.7;margin-top:1.5rem}
+.panic-wrapper{margin:2.5rem auto 1rem;max-width:38rem}
+.panic-btn{display:inline-flex;align-items:center;justify-content:center;gap:0.6rem;background:var(--mustard);color:var(--ink);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(0.95rem,2.5vw,1.15rem);padding:0.9rem 1.4rem;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--red);text-decoration:none;transition:transform .15s,box-shadow .15s;text-transform:uppercase;letter-spacing:0.02em}
+.panic-btn:hover{background:var(--red);color:#fff;box-shadow:2px 2px 0 var(--paper);transform:translate(4px,4px)}
+.panic-siren{animation:spin-siren 1s linear infinite;display:inline-block}
+@keyframes spin-siren{0%,100%{transform:scale(1)}50%{transform:scale(1.3) rotate(15deg)}}
+.panic-sub{font-family:'Caveat',cursive;color:var(--mint);font-size:1.25rem;margin-top:0.6rem;letter-spacing:0.03em}
 
 @media (max-width:520px){.block,.sub{transform:none!important}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
@@ -79,7 +89,7 @@ footer a.shake{animation:shake .4s infinite}
 .cookie p{margin:0;font-weight:700}
 .cookie button{font:700 .95rem 'Space Grotesk',sans-serif;border:3px solid var(--ink);background:#fff;padding:.4rem .8rem;cursor:pointer}
 .cookie.gone{display:none}
-.hint{text-align:center;background:var(--ink);color:var(--paper);margin:0;padding:0 0 5rem}
+.hint{text-align:center;background:var(--ink);color:var(--paper);margin:0;padding:0.8rem 1rem 1.5rem;opacity:0.6;font-size:0.85rem}
 body.flip{transform:rotate(180deg);transition:transform 1s}
 body.rainbow h1{animation:rb 1s linear infinite}
 @keyframes rb{to{filter:hue-rotate(360deg)}}
@@ -133,8 +143,7 @@ body.rainbow h1{animation:rb 1s linear infinite}
 html{-webkit-text-size-adjust:100%}
 button,.btn,summary,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .btn,.pick button,.vibebox button,.cookie button,.vibebox input,summary{min-height:44px}
-img,svg{max-width:100%}
-footer{padding-bottom:calc(4rem + env(safe-area-inset-bottom))}
+footer{padding-bottom:1.5rem}
 
 @media (hover:none){
   .btn:hover,.vibebox button:hover{transform:none;box-shadow:5px 5px 0 var(--ink)}
@@ -165,7 +174,7 @@ footer{padding-bottom:calc(4rem + env(safe-area-inset-bottom))}
   .cookie{left:.6rem;right:.6rem;transform:none;bottom:calc(.6rem + env(safe-area-inset-bottom));padding:.6rem .7rem;max-width:none}
   .cookie p{font-size:.85rem;flex:1 1 100%;text-align:center}
   .cookie button{flex:1}
-  .hint{padding-bottom:7rem;font-size:.8rem}
+  .hint{padding-bottom:1.8rem;font-size:.8rem}
   .ticker{font-size:.85rem}
 }
 

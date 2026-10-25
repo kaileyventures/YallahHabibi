@@ -51,13 +51,35 @@
     });
   });
 
-  // scared "back to top"
+  // scared "back to top" emergency panic escape
   var top = document.getElementById('top');
-  top.addEventListener('mouseenter', function(){ top.classList.add('shake'); });
-  top.addEventListener('mouseleave', function(){ top.classList.remove('shake'); });
-  top.addEventListener('click', function(e){
-    e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});
-  });
+  var topText = document.getElementById('top-text');
+  var topSub = document.getElementById('top-sub');
+  var escapeLines = [
+    "EMERGENCY ESCAPE: Quick, Alt+Tab to Excel!",
+    "EJECT! Act like you're reviewing a spreadsheet!",
+    "Too late. IT Department already logged this visit.",
+    "Ascending to safety (your unread Slack messages await)...",
+    "Fleeing back to the hero section to squash more bugs..."
+  ];
+  var subLines = [
+    "(Clicking this will not refund the 4 minutes of your life you just wasted here)",
+    "(Pro tip: look very stressed so coworkers think you're working)",
+    "(HR would like to know your current location)",
+    "(Don't worry, your secret vibe-coding addiction is safe with me)"
+  ];
+  var eIndex = 0;
+  if (top) {
+    top.addEventListener('mouseenter', function(){
+      eIndex++;
+      topText.textContent = escapeLines[eIndex % escapeLines.length];
+      topSub.textContent = subLines[eIndex % subLines.length];
+    });
+    top.addEventListener('click', function(e){
+      e.preventDefault();
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
 
   // guilt-trip when you leave the tab
   var title = document.title;
