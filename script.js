@@ -137,15 +137,28 @@
     setTimeout(function(){bug.classList.remove('dead');place();},600);
   });
 
-  // cookie
-  var cookie=document.getElementById('cookie'), eaten=0;
-  function eat(e){
-    eaten++; burst(e.clientX,e.clientY,['🍪','🍪','😋'],10);
-    if(eaten>=2) cookie.classList.add('gone');
-    else cookie.querySelector('p').textContent='🍪 Delicious. One more and I\'ll go away.';
+  // cookie notice (dismisses on single click & remembers per session)
+  var cookie = document.getElementById('cookie');
+  if (cookie) {
+    if (sessionStorage.getItem('cookie_eaten')) {
+      cookie.style.display = 'none';
+    } else {
+      function dismissCookie(e) {
+        burst(e.clientX, e.clientY, ['🍪', '😋', '✨', '💨'], 12);
+        cookie.style.opacity = '0';
+        cookie.style.pointerEvents = 'none';
+        sessionStorage.setItem('cookie_eaten', 'true');
+        setTimeout(function(){
+          cookie.classList.add('gone');
+          cookie.style.display = 'none';
+        }, 200);
+      }
+      var eat1 = document.getElementById('eat');
+      var eat2 = document.getElementById('eat2');
+      if (eat1) eat1.addEventListener('click', dismissCookie);
+      if (eat2) eat2.addEventListener('click', dismissCookie);
+    }
   }
-  document.getElementById('eat').addEventListener('click',eat);
-  document.getElementById('eat2').addEventListener('click',eat);
 
   // konami
   var seq=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'], pos=0;
@@ -154,9 +167,15 @@
     pos = (k===seq[pos]) ? pos+1 : (k===seq[0]?1:0);
     if(pos===seq.length){
       pos=0;
+      burst(innerWidth/2, innerHeight/2, ['💻','📦','🏴‍☠️','🔥','💩'], 30);
       document.body.classList.add('rainbow','flip');
-      document.title='Everything is upside down now. Like my sleep schedule.';
-      setTimeout(function(){document.body.classList.remove('flip');},4000);
+      document.title='🚨 404: ORIGINAL CODE NOT FOUND. 100% COPY-PASTED.';
+      var hintEl = document.querySelector('.hint');
+      if (hintEl) hintEl.innerHTML = '<span class="hint-tag" style="background:#000">CONFESSION</span> <b>Plot twist: It\'s all of it. Every single line. Even this sentence was auto-completed.</b>';
+      setTimeout(function(){
+        document.body.classList.remove('flip');
+        if (hintEl) hintEl.innerHTML = '<span class="hint-tag">SENIOR DEV TEST</span> Press <code>↑ ↑ ↓ ↓ ← → ← → B A</code> to reveal all the code I stole from GitHub and Stack Overflow.';
+      }, 5000);
     }
   });
 })();

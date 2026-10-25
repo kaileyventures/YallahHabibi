@@ -85,11 +85,14 @@ footer{background:var(--ink);color:var(--paper);text-align:center;padding:3.5rem
 @keyframes splat{to{transform:scale(2) rotate(90deg);opacity:0}}
 .pop{position:fixed;z-index:20;pointer-events:none;font-size:1.8rem;animation:pop 1.1s ease-out forwards}
 @keyframes pop{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
-.cookie{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:30;background:var(--mustard);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:.8rem 1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;justify-content:center;max-width:94vw}
+.cookie{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:30;background:var(--mustard);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:.8rem 1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;justify-content:center;max-width:94vw;transition:opacity .3s, transform .3s}
 .cookie p{margin:0;font-weight:700}
 .cookie button{font:700 .95rem 'Space Grotesk',sans-serif;border:3px solid var(--ink);background:#fff;padding:.4rem .8rem;cursor:pointer}
-.cookie.gone{display:none}
-.hint{text-align:center;background:var(--ink);color:var(--paper);margin:0;padding:0.8rem 1rem 1.5rem;opacity:0.6;font-size:0.85rem}
+.cookie.gone{display:none !important}
+.hint-bar{background:var(--ink);border-top:2px dashed rgba(255,246,230,0.2);padding:0.9rem 1rem 1.4rem;text-align:center}
+.hint{margin:0;font-size:0.85rem;color:var(--paper);line-height:1.4}
+.hint-tag{background:var(--red);color:#fff;font-family:'Bowlby One',sans-serif;font-size:0.7rem;padding:0.2rem 0.5rem;letter-spacing:0.05em;border:1px solid #fff;display:inline-block;margin-right:0.4rem;vertical-align:middle;box-shadow:2px 2px 0 var(--mustard)}
+.hint code{background:rgba(255,210,63,0.15);color:var(--mustard);border:1px solid var(--mustard);padding:0.15rem 0.4rem;font-weight:700;font-family:monospace;letter-spacing:0.1em}
 body.flip{transform:rotate(180deg);transition:transform 1s}
 body.rainbow h1{animation:rb 1s linear infinite}
 @keyframes rb{to{filter:hue-rotate(360deg)}}
