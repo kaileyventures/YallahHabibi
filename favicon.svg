@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Neo-brutalist shadow -->
+  <rect x="7" y="7" width="52" height="52" rx="14" fill="#1d1033"/>
+  
+  <!-- Neo-brutalist main tile (mustard background with thick ink border) -->
+  <rect x="4" y="4" width="52" height="52" rx="14" fill="#ffd23f" stroke="#1d1033" stroke-width="4"/>
+  
+  <!-- Pink accent tag pill -->
+  <rect x="10" y="8" width="18" height="8" rx="4" fill="#ff8fd0" stroke="#1d1033" stroke-width="2"/>
+  
+  <!-- "YH" text in punchy bold font -->
+  <text x="28" y="32" font-family="'Impact', 'Bowlby One', sans-serif" font-weight="900" font-size="20" fill="#ff4d2e" stroke="#1d1033" stroke-width="1.5" text-anchor="middle">YH</text>
+
+  <!-- Sarcastic little emoji face / bug wink in bottom corner -->
+  <g transform="translate(34, 30)">
+    <!-- Bug body -->
+    <ellipse cx="14" cy="14" rx="11" ry="9" fill="#6ef2c1" stroke="#1d1033" stroke-width="3"/>
+    <!-- Bug eyes (winking & judging) -->
+    <circle cx="10" cy="12" r="2" fill="#1d1033"/>
+    <path d="M16 12l4-2" stroke="#1d1033" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Antennae -->
+    <path d="M10 6c-2-4-5-4-6-3" fill="none" stroke="#1d1033" stroke-width="2" stroke-linecap="round"/>
+    <path d="M18 6c2-4 5-4 6-3" fill="none" stroke="#1d1033" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

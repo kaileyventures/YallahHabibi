@@ -61,8 +61,15 @@
 
   // guilt-trip when you leave the tab
   var title = document.title;
+  var favIcon = document.querySelector('link[rel="icon"]');
   document.addEventListener('visibilitychange', function(){
-    document.title = document.hidden ? 'Come back. I wasn\'t done judging you.' : title;
+    if (document.hidden) {
+      document.title = 'Come back. I wasn\'t done judging you.';
+      if (favIcon) favIcon.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>👀</text></svg>";
+    } else {
+      document.title = title;
+      if (favIcon) favIcon.href = 'favicon.svg';
+    }
   });
 })();
 
