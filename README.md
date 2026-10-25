@@ -84,7 +84,10 @@ I'm not a "Software Architect". I'm worse: I'm a **builder**. If an idea strikes
  └──────────────────────────────────────────────────────────┘
 ```
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=kaileyventures&theme=react-dark&hide_border=true&area=true" alt="Vibe graph" width="90%" />
+<!-- Real-time Animated Vibe Pulse Bar -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=20&pause=800&color=6EF2C1&center=true&vCenter=true&width=500&height=40&lines=%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88+120%25;VIBE+LEVEL%3A+UNSTABLE+%F0%9F%94%A5;SLEEP%3A+NOT+FOUND+(404);SHIPPING+SPEED%3A+WARP+9+%E2%9A%A1" alt="Vibe Monitor" />
+</p>
 
 </div>
 
