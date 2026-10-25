@@ -85,16 +85,11 @@ footer a.shake{animation:shake .4s infinite}
 .cookie p{margin:0;font-weight:700}
 .cookie button{font:700 .95rem 'Space Grotesk',sans-serif;border:3px solid var(--ink);background:#fff;padding:.4rem .8rem;cursor:pointer}
 .cookie.gone{display:none !important}
-.hint-bar{background:var(--ink);border-top:2px dashed rgba(255,246,230,0.2);padding:0.9rem 1rem 1.4rem;text-align:center}
-.hint{margin:0;font-size:0.85rem;color:var(--paper);line-height:1.4}
+.hint-bar{background:var(--ink);border-top:2px dashed rgba(255,246,230,0.2);padding:0.9rem 1rem 1.4rem;text-align:center;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.hint{margin:0;font-size:0.85rem;color:var(--paper);line-height:1.4;pointer-events:none}
 .hint-tag{background:var(--red);color:#fff;font-family:'Bowlby One',sans-serif;font-size:0.7rem;padding:0.2rem 0.5rem;letter-spacing:0.05em;border:1px solid #fff;display:inline-block;margin-right:0.4rem;vertical-align:middle;box-shadow:2px 2px 0 var(--mustard)}
-.hint code{background:rgba(255,210,63,0.15);color:var(--mustard);border:1px solid var(--mustard);padding:0.15rem 0.4rem;font-weight:700;font-family:monospace;letter-spacing:0.1em;cursor:pointer;display:inline-block;transition:transform .1s}
-.hint code:active{transform:scale(0.95)}
-.hint-mobile{display:none}
-@media (hover:none) and (pointer:coarse){
-  .hint-desktop{display:none}
-  .hint-mobile{display:inline}
-}
+.hint code{background:rgba(255,210,63,0.15);color:var(--mustard);border:1px solid var(--mustard);padding:0.15rem 0.4rem;font-weight:700;font-family:monospace;letter-spacing:0.1em;display:inline-block}
+.hint-bar:active code{transform:scale(0.95);background:var(--mustard);color:var(--ink)}
 body.shake-screen{animation:screen-rumble .5s ease-in-out 3}
 @keyframes screen-rumble{
   0%,100%{transform:translate(0,0)}

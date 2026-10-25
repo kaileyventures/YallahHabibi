@@ -141,8 +141,11 @@
     }
   }
 
-  // konami keyboard + mobile tap trigger
+  // konami keyboard + mobile touch trigger
+  var isAnimating = false;
   function triggerEasterEgg(x, y){
+    if (isAnimating) return;
+    isAnimating = true;
     burst(x || innerWidth/2, y || innerHeight/2, ['🤡','🤡','🤡','📉','💤','💥'], 35);
     document.body.classList.add('shake-screen');
     document.title='🤡 CONGRATULATIONS ON UNLOCKING ABSOLUTELY NOTHING.';
@@ -150,27 +153,32 @@
     var isTouch = matchMedia('(hover:none) and (pointer:coarse)').matches;
     if (hintEl) {
       hintEl.innerHTML = isTouch 
-        ? '<span class="hint-tag" style="background:#000">TAPPER SUPREME</span> <b>You really tapped it expecting a secret discount code? Incredible optimism.</b>'
+        ? '<span class="hint-tag" style="background:#000">TAPPER SUPREME</span> <b>You really tapped it expecting a prize? Incredible optimism.</b>'
         : '<span class="hint-tag" style="background:#000">UNEMPLOYED BEHAVIOR</span> <b>You really typed all 10 keys expecting a prize? Go touch grass.</b>';
     }
     setTimeout(function(){
       document.body.classList.remove('shake-screen');
       if (hintEl) {
-        hintEl.innerHTML = '<span class="hint-tag">LOOK AT YOU</span> <span class="hint-desktop">Actually sitting here typing <code id="konami-code">↑ ↑ ↓ ↓ ← → ← → B A</code> on a random portfolio.</span><span class="hint-mobile">Tapping <code id="konami-code">↑ ↑ ↓ ↓ ← → ← → B A</code> because mobile has no arrow keys.</span> What are you doing with your life?';
-        attachMobileTrigger();
+        hintEl.innerHTML = '<span class="hint-tag">LOOK AT YOU</span> Actually typing / tapping <code class="code-btn">↑ ↑ ↓ ↓ ← → ← → B A</code> on a random portfolio. What are you doing with your life?';
       }
+      isAnimating = false;
     }, 4000);
   }
 
-  function attachMobileTrigger(){
-    var codeEl = document.getElementById('konami-code');
-    if (codeEl) {
-      codeEl.addEventListener('click', function(e){
-        triggerEasterEgg(e.clientX, e.clientY);
-      });
-    }
+  var hintTrigger = document.getElementById('hint-trigger');
+  if (hintTrigger) {
+    hintTrigger.addEventListener('click', function(e){
+      triggerEasterEgg(e.clientX, e.clientY);
+    });
+    hintTrigger.addEventListener('touchend', function(e){
+      if (e.changedTouches && e.changedTouches[0]) {
+        var t = e.changedTouches[0];
+        triggerEasterEgg(t.clientX, t.clientY);
+      } else {
+        triggerEasterEgg();
+      }
+    });
   }
-  attachMobileTrigger();
 
   var seq=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'], pos=0;
   addEventListener('keydown',function(e){
