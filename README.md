@@ -51,20 +51,30 @@ I'm not a "Software Architect". I'm worse: I'm a **builder**. If an idea strikes
     </td>
     <td width="50%">
       <h4>🍪 Zero Cookies (Literally)</h4>
-      <p>No cookie banners. Just a satirical cookie dialog you can eat twice until it disappears.</p>
+      <p>No tracking nonsense. Just a satirical cookie alert you can eat with one click to dismiss forever.</p>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <h4>🕹️ The Konami Code</h4>
-      <p>Press <code>↑ ↑ ↓ ↓ ← → ← → B A</code> to flip the DOM upside down into rainbow chaos—mirroring my actual sleep schedule.</p>
+      <h4>🕹️ The Cheat Code</h4>
+      <p>Type (or tap on mobile) <code>↑ ↑ ↓ ↓ ← → ← → B A</code> for an instant clown explosion and earthquake screen shake.</p>
     </td>
     <td width="50%">
       <h4>👀 Tab-Guilt Engine</h4>
-      <p>Switch browser tabs and watch the document title beg you to come back and judge it properly.</p>
+      <p>Switch browser tabs and watch the document title and favicon turn into judging eyes (<code>👀</code>) begging you to return.</p>
     </td>
   </tr>
 </table>
+
+---
+
+### 🏢 Corporate Transparency
+
+| Department | Official Statement |
+| :--- | :--- |
+| **🏢 HQ Location** | Right side of my bed (the side near the wall charger) |
+| **⚖️ Legal Counsel** | Represented by *Better Call Saul*, but downloaded from Telegram |
+| **📈 Investor Deck** | *Profit margin: Negative, but the user experience is immaculate* |
 
 ---
 
@@ -93,7 +103,7 @@ I'm not a "Software Architect". I'm worse: I'm a **builder**. If an idea strikes
 
 ---
 
-### 👥 The Executive Board *(0 Salaries • 0 Equity • 0 Complaints)*
+### 👥 The Executive Board *(16 Agents • 0 Salaries • 0 Complaints)*
 
 <div align="center">
 
