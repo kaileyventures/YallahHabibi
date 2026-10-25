@@ -184,12 +184,12 @@
 (function(){
   var input=document.getElementById('ask'), out=document.getElementById('vibeans'), btn=document.getElementById('askbtn');
   var tpl=[
-    'Build "%s"? Easy. Launching by tonight. Don\'t ask how.',
-    '"%s" is already half done in my head. The other half is coffee.',
-    'Nobody has built "%s" yet, which means I can\'t fail. Beautiful.',
-    '"%s": I\'ll vibe it, break it, fix it, and ship it. Three days, tops. Ish.',
-    'Ah, "%s". The prompts are already writing themselves.',
-    'Give me "%s" and a quiet room. Come back when it\'s live.'
+    'Build "%s"? Already 80% finished in my head. The remaining 20% is prayers and ChatGPT.',
+    '"%s" will launch tonight. It will crash tomorrow. Both will be your fault.',
+    'Ah, "%s". A billion-dollar idea that I will build in 3 hours and abandon by next Tuesday.',
+    '"%s": I will vibe it, break your staging environment, and blame your DNS records.',
+    'Nobody has built "%s" yet because it makes zero business sense. Which means I am the perfect man for the job.',
+    'Give me "%s", 3 espressos, and zero supervision. Come back when you receive the Stripe invoice.'
   ], n=0;
   function go(){
     var v=input.value.trim();

@@ -42,8 +42,8 @@ h1.spin{animation:spin .8s ease}
 .bar em{display:block;font-style:normal;font-size:.85rem;margin-top:2.9rem;opacity:.8}
 
 .quotes ul{list-style:none;padding:0}
-.quotes li{padding:.6rem 0;border-bottom:2px dashed var(--ink);font-size:1.1rem}
-.quotes li span{background:var(--red);color:#fff;font-size:.8rem;padding:.1rem .4rem;margin-left:.3rem;white-space:nowrap}
+.quotes li{padding:.7rem 0;border-bottom:2px dashed var(--ink);font-size:1.05rem;line-height:1.4}
+.quotes li span{background:var(--red);color:#fff;font-size:.78rem;font-weight:700;padding:.15rem .5rem;margin-left:.4rem;display:inline-block;box-shadow:2px 2px 0 var(--ink);vertical-align:middle;text-transform:lowercase}
 
 .pick{display:flex;flex-wrap:wrap;gap:.7rem;margin:1rem 0}
 .pick button{font:700 1rem 'Space Grotesk',sans-serif;background:#fff;border:3px solid var(--ink);padding:.6rem 1rem;cursor:pointer;box-shadow:4px 4px 0 var(--ink)}
