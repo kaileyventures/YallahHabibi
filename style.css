@@ -93,6 +93,14 @@ footer{background:var(--ink);color:var(--paper);text-align:center;padding:3.5rem
 .hint{margin:0;font-size:0.85rem;color:var(--paper);line-height:1.4}
 .hint-tag{background:var(--red);color:#fff;font-family:'Bowlby One',sans-serif;font-size:0.7rem;padding:0.2rem 0.5rem;letter-spacing:0.05em;border:1px solid #fff;display:inline-block;margin-right:0.4rem;vertical-align:middle;box-shadow:2px 2px 0 var(--mustard)}
 .hint code{background:rgba(255,210,63,0.15);color:var(--mustard);border:1px solid var(--mustard);padding:0.15rem 0.4rem;font-weight:700;font-family:monospace;letter-spacing:0.1em}
+body.shake-screen{animation:screen-rumble .5s ease-in-out 3}
+@keyframes screen-rumble{
+  0%,100%{transform:translate(0,0)}
+  20%{transform:translate(-6px, 4px) rotate(-0.5deg)}
+  40%{transform:translate(6px, -4px) rotate(0.5deg)}
+  60%{transform:translate(-4px, -2px)}
+  80%{transform:translate(4px, 2px)}
+}
 body.flip{transform:rotate(180deg);transition:transform 1s}
 body.rainbow h1{animation:rb 1s linear infinite}
 @keyframes rb{to{filter:hue-rotate(360deg)}}

@@ -167,15 +167,15 @@
     pos = (k===seq[pos]) ? pos+1 : (k===seq[0]?1:0);
     if(pos===seq.length){
       pos=0;
-      burst(innerWidth/2, innerHeight/2, ['💻','📦','🏴‍☠️','🔥','💩'], 30);
-      document.body.classList.add('rainbow','flip');
-      document.title='🚨 404: ORIGINAL CODE NOT FOUND. 100% COPY-PASTED.';
+      burst(innerWidth/2, innerHeight/2, ['🤡','🤡','🤡','📉','💤','💥'], 35);
+      document.body.classList.add('shake-screen');
+      document.title='🤡 CONGRATULATIONS ON UNLOCKING ABSOLUTELY NOTHING.';
       var hintEl = document.querySelector('.hint');
-      if (hintEl) hintEl.innerHTML = '<span class="hint-tag" style="background:#000">CONFESSION</span> <b>Plot twist: It\'s all of it. Every single line. Even this sentence was auto-completed.</b>';
+      if (hintEl) hintEl.innerHTML = '<span class="hint-tag" style="background:#000">UNEMPLOYED BEHAVIOR</span> <b>You really typed all 10 keys expecting a prize? Go touch grass.</b>';
       setTimeout(function(){
-        document.body.classList.remove('flip');
-        if (hintEl) hintEl.innerHTML = '<span class="hint-tag">SENIOR DEV TEST</span> Press <code>↑ ↑ ↓ ↓ ← → ← → B A</code> to reveal all the code I stole from GitHub and Stack Overflow.';
-      }, 5000);
+        document.body.classList.remove('shake-screen');
+        if (hintEl) hintEl.innerHTML = '<span class="hint-tag">LOOK AT YOU</span> Actually sitting here typing <code>↑ ↑ ↓ ↓ ← → ← → B A</code> on a random portfolio. What are you doing with your life?';
+      }, 4000);
     }
   });
 })();
