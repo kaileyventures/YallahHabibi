@@ -51,33 +51,14 @@
     });
   });
 
-  // scared "back to top" emergency panic escape
+  // scared "back to top"
   var top = document.getElementById('top');
-  var topText = document.getElementById('top-text');
-  var topSub = document.getElementById('top-sub');
-  var escapeLines = [
-    "EMERGENCY ESCAPE: Quick, Alt+Tab to Excel!",
-    "EJECT! Act like you're reviewing a spreadsheet!",
-    "Too late. IT Department already logged this visit.",
-    "Ascending to safety (your unread Slack messages await)...",
-    "Fleeing back to the hero section to squash more bugs..."
-  ];
-  var subLines = [
-    "(Clicking this will not refund the 4 minutes of your life you just wasted here)",
-    "(Pro tip: look very stressed so coworkers think you're working)",
-    "(HR would like to know your current location)",
-    "(Don't worry, your secret vibe-coding addiction is safe with me)"
-  ];
-  var eIndex = 0;
   if (top) {
-    top.addEventListener('mouseenter', function(){
-      eIndex++;
-      topText.textContent = escapeLines[eIndex % escapeLines.length];
-      topSub.textContent = subLines[eIndex % subLines.length];
-    });
+    top.addEventListener('mouseenter', function(){ top.classList.add('shake'); });
+    top.addEventListener('mouseleave', function(){ top.classList.remove('shake'); });
     top.addEventListener('click', function(e){
       e.preventDefault();
-      window.scrollTo({top:0, behavior:'smooth'});
+      window.scrollTo({top: 0, behavior: 'smooth'});
     });
   }
 
@@ -160,22 +141,44 @@
     }
   }
 
-  // konami
+  // konami keyboard + mobile tap trigger
+  function triggerEasterEgg(x, y){
+    burst(x || innerWidth/2, y || innerHeight/2, ['🤡','🤡','🤡','📉','💤','💥'], 35);
+    document.body.classList.add('shake-screen');
+    document.title='🤡 CONGRATULATIONS ON UNLOCKING ABSOLUTELY NOTHING.';
+    var hintEl = document.querySelector('.hint');
+    var isTouch = matchMedia('(hover:none) and (pointer:coarse)').matches;
+    if (hintEl) {
+      hintEl.innerHTML = isTouch 
+        ? '<span class="hint-tag" style="background:#000">TAPPER SUPREME</span> <b>You really tapped it expecting a secret discount code? Incredible optimism.</b>'
+        : '<span class="hint-tag" style="background:#000">UNEMPLOYED BEHAVIOR</span> <b>You really typed all 10 keys expecting a prize? Go touch grass.</b>';
+    }
+    setTimeout(function(){
+      document.body.classList.remove('shake-screen');
+      if (hintEl) {
+        hintEl.innerHTML = '<span class="hint-tag">LOOK AT YOU</span> <span class="hint-desktop">Actually sitting here typing <code id="konami-code">↑ ↑ ↓ ↓ ← → ← → B A</code> on a random portfolio.</span><span class="hint-mobile">Tapping <code id="konami-code">↑ ↑ ↓ ↓ ← → ← → B A</code> because mobile has no arrow keys.</span> What are you doing with your life?';
+        attachMobileTrigger();
+      }
+    }, 4000);
+  }
+
+  function attachMobileTrigger(){
+    var codeEl = document.getElementById('konami-code');
+    if (codeEl) {
+      codeEl.addEventListener('click', function(e){
+        triggerEasterEgg(e.clientX, e.clientY);
+      });
+    }
+  }
+  attachMobileTrigger();
+
   var seq=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'], pos=0;
   addEventListener('keydown',function(e){
     var k=e.key.length===1?e.key.toLowerCase():e.key;
     pos = (k===seq[pos]) ? pos+1 : (k===seq[0]?1:0);
     if(pos===seq.length){
       pos=0;
-      burst(innerWidth/2, innerHeight/2, ['🤡','🤡','🤡','📉','💤','💥'], 35);
-      document.body.classList.add('shake-screen');
-      document.title='🤡 CONGRATULATIONS ON UNLOCKING ABSOLUTELY NOTHING.';
-      var hintEl = document.querySelector('.hint');
-      if (hintEl) hintEl.innerHTML = '<span class="hint-tag" style="background:#000">UNEMPLOYED BEHAVIOR</span> <b>You really typed all 10 keys expecting a prize? Go touch grass.</b>';
-      setTimeout(function(){
-        document.body.classList.remove('shake-screen');
-        if (hintEl) hintEl.innerHTML = '<span class="hint-tag">LOOK AT YOU</span> Actually sitting here typing <code>↑ ↑ ↓ ↓ ← → ← → B A</code> on a random portfolio. What are you doing with your life?';
-      }, 4000);
+      triggerEasterEgg();
     }
   });
 })();
