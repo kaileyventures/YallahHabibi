@@ -46,21 +46,23 @@ YallahHabibi/
 ├── css/                       # 🎨 Modular CSS Layer (Separation of Concerns)
 │   ├── variables.css          # Color design tokens, typography, resets & focus ring
 │   ├── layout.css             # News ticker, Hero section, Block shells, Roast footer
-│   ├── components.css         # Method cards, Skill bars, 16-Agent grid, Estimates, Tags
-│   ├── animations.css         # Squashable bug, Confetti pops, Cookie banner, Easter eggs
-│   └── responsive.css         # Mobile viewports, touch targets & prefers-reduced-motion
+│   ├── components.css         # Method cards, Skill bars, 16-Agent grid, Estimates, Tags, Badges
+│   ├── animations.css         # Squashable bug, Confetti pops, Cookie banner, Easter eggs, Shakes
+│   └── responsive.css         # Mobile viewports, touch targets, safe-areas & fluid auto-fit
 │
 └── js/                        # ⚡ Modular ES6+ JavaScript Layer
     ├── burst.js               # Reusable confetti physics & emoji burst engine
     ├── core.js                # Shy button flee logic, logo spin, estimator & tab guilt
     ├── playground.js          # Crawling bug mini-game, cookie toast, Konami cheat code
-    ├── vibes.js               # Startup pitch generator & nocturnal dev responses
+    ├── quotes.js              # Interactive Polygraph Lie Detector & Confession reaction engine
+    ├── vibes.js               # 50 ultra-sarcastic startup pitch roasts (non-repeating deck)
     └── stats.js               # IntersectionObserver-driven smooth number counter
 ```
 
 #### Why This Architecture?
 * **Zero Build Step:** Runs out of the box in any browser using native ES Modules (`type="module"`).
-* **High Maintainability:** Want to tweak the squashable bug? Open [playground.js](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/js/playground.js) or [animations.css](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/css/animations.css). Want to change color palettes? Open [variables.css](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/css/variables.css).
+* **High Maintainability:** Want to tweak the squashable bug? Open [playground.js](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/js/playground.js) or [animations.css](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/css/animations.css). Want to tweak lie confessions? Open [quotes.js](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/js/quotes.js).
+* **Mobile First & Responsive:** Fluid auto-fitting, zero horizontal overflow, and notch-safe areas (`env(safe-area-inset-*)`).
 * **A11y & Performance:** Fully honors `prefers-reduced-motion` and leverages lightweight CSS transitions and `IntersectionObserver`.
 
 ---
@@ -76,6 +78,16 @@ YallahHabibi/
     <td width="50%">
       <h4>🐛 10-Bug Bounty & QA Certificate</h4>
       <p>A rogue bug that crawls and evolves as you squash it. Crush 10 bugs to unlock an Official <b>Unpaid Senior QA Engineer Certificate</b> modal with a claimable $0.00 salary.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4>🚨 Interactive Polygraph (Lie Detector)</h4>
+      <p>Click on developer excuses to force confessions. Features real-time lie percentage stamps, polygraph radar pulses, and hilarious truth bursts.</p>
+    </td>
+    <td width="50%">
+      <h4>🔮 50-Roast Startup Pitch-o-Meter</h4>
+      <p>Enter any startup idea (or empty prompt) and get roasted with 50 unique, non-repeating developer roasts served via a shuffled deck algorithm.</p>
     </td>
   </tr>
   <tr>
@@ -109,6 +121,7 @@ YallahHabibi/
 | **🏢 HQ Location** | Right side of my bed (the side near the wall charger) |
 | **⚖️ Legal Counsel** | Represented by *Better Call Saul*, but downloaded from Telegram |
 | **📈 Investor Deck** | *Profit margin: Negative, but the user experience is immaculate* |
+| **💼 Role** | Chief Hallucination Officer (Gaslighting LLMs into writing working code) |
 
 ---
 
@@ -145,7 +158,10 @@ YallahHabibi/
 | :---: | :--- | :--- |
 | 🧠 **Claude** | Chief Philosophy Officer | Does the heavy thinking. I take 100% of the glory. |
 | ♊ **Gemini** | VP of Second Opinions | Consulted when Claude says *"bro, that's a terrible idea"*. |
-| 💬 **ChatGPT** | Senior PR Rep | The one mom knows. Extremely chatty, unapologetically confident. |
+| 💬 **ChatGPT** | Senior PR Rep | The one mom knows. Solid, chatty, occasionally confidently wrong. |
+| 🐙 **GitHub** | Head of Archives | Cemetery of half-finished side projects. Zero PRs, 100% emotional baggage. |
+| 🔺 **Vercel** | VP of Deployments | Deploys straight to prod. If build breaks, I pretend to sleep. |
+| 🐳 **Docker** | Container Whale | Still don't know what a Dockerfile does, but ChatGPT stopped crying. |
 | 🚀 **Copilot** | Auto-Complete Pilot | Finishes my sentences, my code, and occasionally invents bugs. |
 | ☕ **Coffee** | Principal Engineer | **The ONLY one on payroll.** Without it, the company collapses. |
 
