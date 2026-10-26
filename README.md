@@ -2,11 +2,11 @@
 
 <!-- Animated Caps Typewriter Banner -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Bowlby+One&size=40&pause=1000&color=FF8FD0&center=true&vCenter=true&random=false&width=650&height=90&lines=YALLAH+HABIBI+%F0%9F%A4%99;THE+FOOTER+GUY+YOU+CLICKED;VIBE-CODING+SINCE+2%3A00+AM;BUILT+ON+COFFEE+%26+PROMPTS" alt="Yallah Habibi Typing Banner" />
+  <img src="https://readme-typing-svg.demolab.com?font=Bowlby+One&size=38&pause=1000&color=FF8FD0&center=true&vCenter=true&random=false&width=750&height=90&lines=YALLAH+HABIBI+%F0%9F%A4%99;CHIEF+HALLUCINATION+OFFICER;CODE+WRITTEN+BY+PANIC+%26+LLMS;TESTING+DIRECTLY+IN+PROD;BUILT+AT+3%3A14+AM+(DO+NOT+TOUCH)" alt="Yallah Habibi Typing Banner" />
 </a>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=18&pause=1200&color=FFD23F&center=true&vCenter=true&width=500&height=40&lines=No+Degree.+No+Bootcamp.+No+Fear.;Just+a+prompt+and+47+open+tabs.;Bugs+are+just+unscripted+features." alt="Subline typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=18&pause=1100&color=FFD23F&center=true&vCenter=true&width=620&height=40&lines=No+degree.+No+bootcamp.+Zero+unit+tests.;Gaslighting+AI+models+until+code+compiles.;84+Chrome+tabs+screaming+for+mercy.;If+it+crashes%2C+blame+your+DNS+records." alt="Subline typing" />
 </p>
 
 <!-- Live Badges (HD Aesthetic) -->
@@ -154,7 +154,7 @@ YallahHabibi/
 
 <!-- Real-time Animated Vibe Pulse Bar -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=20&pause=800&color=6EF2C1&center=true&vCenter=true&width=500&height=40&lines=%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88+120%25;VIBE+LEVEL%3A+UNSTABLE+%F0%9F%94%A5;SLEEP%3A+NOT+FOUND+(404);SHIPPING+SPEED%3A+WARP+9+%E2%9A%A1" alt="Vibe Monitor" />
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=20&pause=900&color=6EF2C1&center=true&vCenter=true&width=580&height=40&lines=SYSTEM+STATUS%3A+HELD+BY+PRAYERS+%F0%9F%99%8F;CPU+TEMPERATURE%3A+SUN-SURFACE+(BOEING+747);IMPOSTER+SYNDROME%3A+MAXED+OUT;GIT+PUSH+--FORCE%3A+100%25+SUCCESS+(NO+BACKUP);SHIPPING+DIRECTLY+TO+PROD+%E2%9A%A1" alt="Vibe Monitor" />
 </p>
 
 </div>
