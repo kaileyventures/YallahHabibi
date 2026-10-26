@@ -17,10 +17,6 @@
   line-height: 1;
 }
 
-.bug:hover {
-  transform: scale(1.15);
-  filter: drop-shadow(0 0 8px rgba(255, 77, 46, 0.7)) drop-shadow(2px 2px 0 var(--ink));
-}
 
 .bug.dead {
   transition: none;
