@@ -236,7 +236,7 @@ export function initPlayground() {
   }
 
   // =========================================================================
-  // Konami keyboard code & mobile tap easter egg
+  // Secret Konami Keyboard Code Easter Egg (↑ ↑ ↓ ↓ ← → ← → B A)
   // =========================================================================
   let isAnimating = false;
   function triggerEasterEgg(x, y) {
@@ -244,38 +244,14 @@ export function initPlayground() {
     isAnimating = true;
     burst(x || window.innerWidth / 2, y || window.innerHeight / 2, ['🤡', '🤡', '🤡', '📉', '💤', '💥'], 35);
     document.body.classList.add('shake-screen');
+    const prevTitle = document.title;
     document.title = '🤡 CONGRATULATIONS ON UNLOCKING ABSOLUTELY NOTHING.';
-    
-    const hintEl = document.querySelector('.hint');
-    const isTouch = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
-    if (hintEl) {
-      hintEl.innerHTML = isTouch
-        ? '<span class="hint-tag" style="background:#000">TAPPER SUPREME</span> <b>You really tapped it expecting a prize? Incredible optimism.</b>'
-        : '<span class="hint-tag" style="background:#000">UNEMPLOYED BEHAVIOR</span> <b>You really typed all 10 keys expecting a prize? Go touch grass.</b>';
-    }
 
     setTimeout(() => {
       document.body.classList.remove('shake-screen');
-      if (hintEl) {
-        hintEl.innerHTML = '<span class="hint-tag">LOOK AT YOU</span> Actually typing / tapping <code class="code-btn">↑ ↑ ↓ ↓ ← → ← → B A</code> on a random portfolio. What are you doing with your life?';
-      }
+      document.title = prevTitle;
       isAnimating = false;
     }, 4000);
-  }
-
-  const hintTrigger = document.getElementById('hint-trigger');
-  if (hintTrigger) {
-    hintTrigger.addEventListener('click', (e) => {
-      triggerEasterEgg(e.clientX, e.clientY);
-    });
-    hintTrigger.addEventListener('touchend', (e) => {
-      if (e.changedTouches && e.changedTouches[0]) {
-        const t = e.changedTouches[0];
-        triggerEasterEgg(t.clientX, t.clientY);
-      } else {
-        triggerEasterEgg();
-      }
-    });
   }
 
   const seq = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
