@@ -73,21 +73,31 @@ YallahHabibi/
   <tr>
     <td width="50%">
       <h4>🏃‍♂️ The Coward Button</h4>
-      <p>Try clicking <code>Don't Hire Me</code>. It runs away faster than a junior dev when production drops on Friday at 5 PM.</p>
+      <p>Try clicking <code>Don't Hire Me</code>. It flees with random CSS coordinates faster than a junior dev when production drops on Friday at 5 PM.</p>
     </td>
     <td width="50%">
-      <h4>🐛 10-Bug Bounty & QA Certificate</h4>
-      <p>A rogue bug that crawls and evolves as you squash it. Crush 10 bugs to unlock an Official <b>Unpaid Senior QA Engineer Certificate</b> modal with a claimable $0.00 salary.</p>
+      <h4>🐛 Tiered Bug Bounty & QA Certificates</h4>
+      <p>A precision-targetable rogue <code>🐛</code> with a custom sniper crosshair. Squash 10, 20, or 25+ bugs to unlock responsive, claimable <b>Unpaid QA Certificates</b> ($0.00 salary).</p>
     </td>
   </tr>
   <tr>
     <td width="50%">
       <h4>🚨 Interactive Polygraph (Lie Detector)</h4>
-      <p>Click on developer excuses to force confessions. Features real-time lie percentage stamps, polygraph radar pulses, and hilarious truth bursts.</p>
+      <p>Click any developer excuse to force confessions. Features animated radar status pills, percentage-based lie tags, violent stamp reactions, and truth-bomb emoji bursts.</p>
     </td>
     <td width="50%">
       <h4>🔮 50-Roast Startup Pitch-o-Meter</h4>
-      <p>Enter any startup idea (or empty prompt) and get roasted with 50 unique, non-repeating developer roasts served via a shuffled deck algorithm.</p>
+      <p>Enter any startup idea (or leave it blank) to get roasted with 50 unique, non-repeating developer roasts served via a smart shuffled-deck algorithm.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4>📰 "As Seen On" Press Mentions</h4>
+      <p>Sticker-style neo-brutalist press badges with live pulsating server radars (<code>localhost:3000</code>), WhatsApp statuses, and single browser tabs.</p>
+    </td>
+    <td width="50%">
+      <h4>🫰 Korean Finger-Heart Sign-off</h4>
+      <p>Interactive vector finger-heart at the hero tagline. Hover to trigger an instant micro-scaling bounce because developers secretly need love too.</p>
     </td>
   </tr>
   <tr>
@@ -97,7 +107,7 @@ YallahHabibi/
     </td>
     <td width="50%">
       <h4>🍪 Zero Cookies (Literally)</h4>
-      <p>No tracking nonsense. Just a satirical cookie alert you can eat with one click to dismiss forever.</p>
+      <p>No tracking nonsense. Just a satirical bottom cookie alert you can eat with one click to dismiss forever.</p>
     </td>
   </tr>
   <tr>
@@ -122,6 +132,7 @@ YallahHabibi/
 | **⚖️ Legal Counsel** | Represented by *Better Call Saul*, but downloaded from Telegram |
 | **📈 Investor Deck** | *Profit margin: Negative, but the user experience is immaculate* |
 | **💼 Role** | Chief Hallucination Officer (Gaslighting LLMs into writing working code) |
+| **📱 Mobile Support** | 100% fluid auto-fitting, zero horizontal scroll, iOS auto-zoom immune |
 
 ---
 
@@ -136,7 +147,7 @@ YallahHabibi/
  │  Lines copy-pasted blind      │ 40,000+                  │
  │  Unit tests written           │ 0 (We test in prod)      │
  │  Cries for help sent to AI    │ 9,999+                   │
- │  Clue why the code compiles   │ 0                        │
+ │  Clue why lines 40-90 compile │ 0                        │
  │  Math accuracy                │ 100% (Audited by vibes)  │
  └──────────────────────────────────────────────────────────┘
 ```
@@ -160,9 +171,11 @@ YallahHabibi/
 | ♊ **Gemini** | VP of Second Opinions | Consulted when Claude says *"bro, that's a terrible idea"*. |
 | 💬 **ChatGPT** | Senior PR Rep | The one mom knows. Solid, chatty, occasionally confidently wrong. |
 | 🐙 **GitHub** | Head of Archives | Cemetery of half-finished side projects. Zero PRs, 100% emotional baggage. |
-| 🔺 **Vercel** | VP of Deployments | Deploys straight to prod. If build breaks, I pretend to sleep. |
+| 🔺 **Vercel** | VP of Deployments | Deploys straight to prod. If build breaks, I close laptop and sleep. |
 | 🐳 **Docker** | Container Whale | Still don't know what a Dockerfile does, but ChatGPT stopped crying. |
+| 🔍 **Googling** | Oldest Colleague | Still undefeated across 20+ years of Stack Overflow copying. |
 | 🚀 **Copilot** | Auto-Complete Pilot | Finishes my sentences, my code, and occasionally invents bugs. |
+| 💻 **Cursor** | Senior Lead Watcher | Edits ten files while I watch like a proud parent. |
 | ☕ **Coffee** | Principal Engineer | **The ONLY one on payroll.** Without it, the company collapses. |
 
 </div>
