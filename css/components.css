@@ -59,7 +59,7 @@
 }
 .bar {
   position: relative;
-  margin: .9rem 0;
+  margin: 1rem 0 3.2rem;
   border: 3px solid var(--ink);
   height: 2.6rem;
   background: var(--paper);
@@ -87,7 +87,9 @@
   font-style: normal;
   font-size: .85rem;
   margin-top: 2.9rem;
-  opacity: .8;
+  opacity: .85;
+  color: var(--ink);
+  line-height: 1.35;
 }
 
 /* AI Team Grid & SVG Icons */
