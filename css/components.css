@@ -31,9 +31,10 @@
 }
 .vibebox input {
   flex: 1 1 12rem;
+  height: 44px;
   font: 500 1rem 'Space Grotesk', sans-serif;
   border: 3px solid var(--ink);
-  padding: .6rem;
+  padding: 0 .8rem;
   background: var(--paper);
 }
 .vibebox button {
