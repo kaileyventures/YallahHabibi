@@ -21,8 +21,8 @@
 
 /* GitHub Star Floating / Sticky Badge */
 .github-star-badge {
-  position: fixed;
-  top: 3.8rem;
+  position: absolute;
+  top: 1.6rem;
   right: 1.2rem;
   z-index: 90;
   display: inline-flex;

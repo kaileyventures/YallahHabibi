@@ -47,8 +47,8 @@ footer {
     padding-right: env(safe-area-inset-right);
   }
   .github-star-badge {
-    top: 3.4rem;
-    right: .6rem;
+    top: 1.2rem;
+    right: .9rem;
     padding: .3rem .6rem;
     font-size: .8rem;
     box-shadow: 3px 3px 0 var(--ink);
