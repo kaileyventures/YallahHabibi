@@ -74,8 +74,8 @@ YallahHabibi/
       <p>Try clicking <code>Don't Hire Me</code>. It runs away faster than a junior dev when production drops on Friday at 5 PM.</p>
     </td>
     <td width="50%">
-      <h4>🐛 Emotional Support Bug</h4>
-      <p>A rogue <code>🐛</code> crawls across the screen. Squash it to boost your stats. Free QA testing right there.</p>
+      <h4>🐛 10-Bug Bounty & QA Certificate</h4>
+      <p>A rogue bug that crawls and evolves as you squash it. Crush 10 bugs to unlock an Official <b>Unpaid Senior QA Engineer Certificate</b> modal with a claimable $0.00 salary.</p>
     </td>
   </tr>
   <tr>
