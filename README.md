@@ -9,12 +9,13 @@
   <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=18&pause=1200&color=FFD23F&center=true&vCenter=true&width=500&height=40&lines=No+Degree.+No+Bootcamp.+No+Fear.;Just+a+prompt+and+47+open+tabs.;Bugs+are+just+unscripted+features." alt="Subline typing" />
 </p>
 
-<!-- Live Badges -->
+<!-- Live Badges (HD Aesthetic) -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Vibes-100%25%20Organic-ff8fd0?style=for-the-badge&logoColor=1d1033" alt="Vibes" />
-  <img src="https://img.shields.io/badge/Architecture-Clean_Modular_Vanilla-ffd23f?style=for-the-badge&logoColor=1d1033" alt="Architecture" />
-  <img src="https://img.shields.io/badge/Caffeine_Level-CRITICAL-ff4d2e?style=for-the-badge&logo=coffeescript&logoColor=white" alt="Caffeine" />
-  <img src="https://img.shields.io/badge/Console_Errors-Zero_Regrets-6ef2c1?style=for-the-badge&logoColor=1d1033" alt="Errors" />
+  <img src="https://img.shields.io/badge/VIBES-100%25%20ORGANIC-FF8FD0?style=for-the-badge&logo=sparkles&logoColor=1D1033&labelColor=1D1033" alt="Vibes" />
+  <img src="https://img.shields.io/badge/ARCHITECTURE-MODULAR%20ES6%2B-FFD23F?style=for-the-badge&logo=javascript&logoColor=1D1033&labelColor=1D1033" alt="Architecture" />
+  <img src="https://img.shields.io/badge/CAFFEINE-CRITICAL%20LVL-FF4D2E?style=for-the-badge&logo=coffeescript&logoColor=FFFFFF&labelColor=1D1033" alt="Caffeine" />
+  <img src="https://img.shields.io/badge/ERRORS-RETYPED%20AS%20FEATURES-6EF2C1?style=for-the-badge&logo=sentry&logoColor=1D1033&labelColor=1D1033" alt="Errors" />
+  <img src="https://img.shields.io/badge/TRACKING-0%25%20COOKIES-FFFFFF?style=for-the-badge&logo=cookiecutter&logoColor=1D1033&labelColor=1D1033" alt="Cookies" />
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=1d1033&height=120&section=header"/>
@@ -183,10 +184,11 @@ npx -y serve .
 <br/>
 
 <a href="mailto:hi@yallahhabibi.is-a.dev">
-  <img src="https://img.shields.io/badge/Email_Me-If_You_Dare-ff4d2e?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <img src="https://img.shields.io/badge/EMAIL%20ME-DIRECT%20TO%20INBOX-FF4D2E?style=for-the-badge&logo=maildotru&logoColor=FFFFFF&labelColor=1D1033" alt="Email" />
 </a>
+&nbsp;&nbsp;
 <a href="https://t.me/YallahHabibi" target="_blank">
-  <img src="https://img.shields.io/badge/Telegram-Slide_Into_DMs-24A1DE?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
+  <img src="https://img.shields.io/badge/TELEGRAM-%40YALLAHHABIBI-26A5E4?style=for-the-badge&logo=telegram&logoColor=FFFFFF&labelColor=1D1033" alt="Telegram" />
 </a>
 
 <br/><br/>
