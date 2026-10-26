@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Base styles, CSS Variables, and Resets
+   ========================================================================== */
+
+:root {
+  --ink: #1d1033;
+  --pink: #ff8fd0;
+  --mustard: #ffd23f;
+  --mint: #6ef2c1;
+  --paper: #fff6e6;
+  --red: #ff4d2e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  overflow-x: hidden;
+  background-image: radial-gradient(var(--ink) 1px, transparent 1.5px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  opacity: .93;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+}
+
+button, .btn, summary, input {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 4px solid var(--red);
+  outline-offset: 3px;
+}

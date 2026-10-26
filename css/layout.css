@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Layout: Ticker, Hero, Base Blocks, Footer
+   ========================================================================== */
+
+/* Ticker */
+.ticker {
+  background: var(--ink);
+  color: var(--mustard);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: .5rem 0;
+}
+.ticker span {
+  display: inline-block;
+  animation: tick 22s linear infinite;
+}
+@keyframes tick {
+  to { transform: translateX(-50%); }
+}
+
+/* Hero Section */
+.hero {
+  padding: 3rem 1.25rem 4rem;
+  max-width: 62rem;
+  margin: auto;
+  position: relative;
+}
+.note {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: var(--red);
+  transform: rotate(-4deg);
+  display: inline-block;
+}
+h1 {
+  font-family: 'Bowlby One', sans-serif;
+  font-weight: 400;
+  font-size: clamp(3.6rem, 17vw, 11rem);
+  line-height: .9;
+  cursor: pointer;
+  color: var(--pink);
+  -webkit-text-stroke: 3px var(--ink);
+  text-shadow: 8px 8px 0 var(--ink);
+  margin: .5rem 0 1.5rem;
+  user-select: none;
+  animation: wob 5s ease-in-out infinite;
+  transform-origin: left bottom;
+}
+@keyframes wob {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(1.5deg); }
+}
+h1.spin {
+  animation: spin .8s ease;
+}
+@keyframes spin {
+  to { transform: rotate(720deg) scale(.6); }
+}
+.sub {
+  max-width: 34rem;
+  font-size: 1.2rem;
+  background: var(--mustard);
+  border: 3px solid var(--ink);
+  padding: 1rem 1.2rem;
+  box-shadow: 6px 6px 0 var(--ink);
+  transform: rotate(1deg);
+}
+
+/* CTA & Buttons */
+.cta {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 2.2rem;
+  min-height: 4rem;
+  align-items: center;
+}
+.btn {
+  font: 700 1.15rem 'Space Grotesk', sans-serif;
+  border: 3px solid var(--ink);
+  padding: .8rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  transition: transform .1s, box-shadow .1s;
+  min-height: 44px;
+}
+.btn:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.yes { background: var(--mint); }
+.no { background: #fff; }
+.no.fly { position: fixed; z-index: 9; }
+
+/* Base Blocks */
+.block {
+  max-width: 46rem;
+  margin: 0 auto 3rem;
+  padding: 1.5rem 1.4rem;
+  background: #fff;
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+.block:nth-of-type(even) { transform: rotate(-.8deg); background: var(--mint); }
+.block:nth-of-type(odd) { transform: rotate(.6deg); }
+.block h2 {
+  font-family: 'Bowlby One', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.block h2 small, .teamh small {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: var(--red);
+  display: inline-block;
+}
+.block p + p { margin-top: .5rem; }
+.tiny { font-size: .85rem; opacity: .75; margin-top: .8rem; }
+
+/* Footer */
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 3.5rem 1.25rem 4rem;
+  margin-top: 4rem;
+  border-top: 5px solid var(--mustard);
+}
+.footer-badge {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  border: 2px solid var(--paper);
+  box-shadow: 4px 4px 0 var(--pink);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+  transform: rotate(-1deg);
+}
+.footer-big {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  max-width: 38rem;
+  margin: 0 auto 2rem;
+  color: var(--mustard);
+  line-height: 1.35;
+}
+.footer-roast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+  max-width: 48rem;
+  margin: 0 auto 2.5rem;
+  text-align: left;
+}
+.f-item {
+  background: #2a1847;
+  border: 2px solid var(--mustard);
+  padding: 0.8rem 1rem;
+  box-shadow: 4px 4px 0 var(--pink);
+}
+.f-item span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--mint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.f-item p {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  color: var(--paper);
+  line-height: 1.3;
+}
+.f-copy { opacity: 0.7; margin-top: 1.5rem; }
+footer a {
+  color: var(--mustard);
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 1.2rem;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+footer a.shake { animation: shake .4s infinite; }
+@keyframes shake {
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}

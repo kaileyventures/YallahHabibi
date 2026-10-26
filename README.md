@@ -12,8 +12,8 @@
 <!-- Live Badges -->
 <p align="center">
   <img src="https://img.shields.io/badge/Vibes-100%25%20Organic-ff8fd0?style=for-the-badge&logoColor=1d1033" alt="Vibes" />
+  <img src="https://img.shields.io/badge/Architecture-Clean_Modular_Vanilla-ffd23f?style=for-the-badge&logoColor=1d1033" alt="Architecture" />
   <img src="https://img.shields.io/badge/Caffeine_Level-CRITICAL-ff4d2e?style=for-the-badge&logo=coffeescript&logoColor=white" alt="Caffeine" />
-  <img src="https://img.shields.io/badge/Stack_Overflow-First_Name_Basis-ffd23f?style=for-the-badge&logo=stackoverflow&logoColor=1d1033" alt="Stack Overflow" />
   <img src="https://img.shields.io/badge/Console_Errors-Zero_Regrets-6ef2c1?style=for-the-badge&logoColor=1d1033" alt="Errors" />
 </p>
 
@@ -28,6 +28,39 @@
 You just opened the repository of a website proudly built on **vibes, panic, and nocturnal caffeine**.
 
 I'm not a "Software Architect". I'm worse: I'm a **builder**. If an idea strikes at 2:15 AM, it is live on production before your morning alarm rings. Does it work? Yes. Do I know how every line works? **Picasso didn't explain his brush settings to the canvas store, so please don't ask me.**
+
+---
+
+### 🏛️ Code Architecture (Clean Modular Vanilla)
+
+Even chaotic vibe-code deserves pristine modular elegance. Zero bloat, zero heavy build tools, pure native browser standards:
+
+```text
+YallahHabibi/
+├── index.html                 # Semantic HTML5 + loads script.js via ES Modules
+├── favicon.svg                # Dynamic SVG favicon (swaps on tab switch)
+├── style.css                  # Master CSS orchestrator (@import bundle)
+├── script.js                  # Main JS entrypoint (imports & triggers ES modules)
+│
+├── css/                       # 🎨 Modular CSS Layer (Separation of Concerns)
+│   ├── variables.css          # Color design tokens, typography, resets & focus ring
+│   ├── layout.css             # News ticker, Hero section, Block shells, Roast footer
+│   ├── components.css         # Method cards, Skill bars, 16-Agent grid, Estimates, Tags
+│   ├── animations.css         # Squashable bug, Confetti pops, Cookie banner, Easter eggs
+│   └── responsive.css         # Mobile viewports, touch targets & prefers-reduced-motion
+│
+└── js/                        # ⚡ Modular ES6+ JavaScript Layer
+    ├── burst.js               # Reusable confetti physics & emoji burst engine
+    ├── core.js                # Shy button flee logic, logo spin, estimator & tab guilt
+    ├── playground.js          # Crawling bug mini-game, cookie toast, Konami cheat code
+    ├── vibes.js               # Startup pitch generator & nocturnal dev responses
+    └── stats.js               # IntersectionObserver-driven smooth number counter
+```
+
+#### Why This Architecture?
+* **Zero Build Step:** Runs out of the box in any browser using native ES Modules (`type="module"`).
+* **High Maintainability:** Want to tweak the squashable bug? Open [playground.js](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/js/playground.js) or [animations.css](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/css/animations.css). Want to change color palettes? Open [variables.css](file:///h:/My%20Drive/Dev%20Work/YallahHabibi/css/variables.css).
+* **A11y & Performance:** Fully honors `prefers-reduced-motion` and leverages lightweight CSS transitions and `IntersectionObserver`.
 
 ---
 
@@ -123,13 +156,18 @@ I'm not a "Software Architect". I'm worse: I'm a **builder**. If an idea strikes
 
 Zero `npm install`. Zero `500MB node_modules` crater on your SSD. Zero webpack tears.
 
-```bash
-# 💡 Option 1 (Galaxy Brain):
-# Just double click index.html. That's literally it.
+Because modern browser ES Modules are used (`type="module"`), run with any lightweight local server (or VS Code Live Server):
 
-# 💻 Option 2 (If you need a terminal to feel like a hacker):
+```bash
+# 💡 Option 1: Python local server (Built-in on Windows/Mac/Linux)
 python -m http.server 8000
 # -> Open http://localhost:8000
+
+# 💻 Option 2: Node npx serve (if you have Node.js installed)
+npx -y serve .
+
+# 🚀 Option 3: VS Code / IDE
+# Right click index.html -> "Open with Live Server"
 ```
 
 ---
@@ -144,7 +182,7 @@ python -m http.server 8000
 
 <br/>
 
-<a href="mailto:kaileyventures@zohomail.in">
+<a href="mailto:hi@yallahhabibi.is-a.dev">
   <img src="https://img.shields.io/badge/Email_Me-If_You_Dare-ff4d2e?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </a>
 <a href="https://t.me/YallahHabibi" target="_blank">

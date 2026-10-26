@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Responsive & Accessibility Overrides:
+   Mobile styling, touch targets, reduced motion
+   ========================================================================== */
+
+.btn, .pick button, .vibebox button, .cookie button, .vibebox input, summary {
+  min-height: 44px;
+}
+footer {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 520px) {
+  .block, .sub {
+    transform: none !important;
+  }
+}
+
+@media (hover: none) {
+  .btn:hover, .vibebox button:hover {
+    transform: none;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .agent:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+  .hero {
+    padding: 2rem 1rem 3rem;
+  }
+  h1 {
+    -webkit-text-stroke: 2px var(--ink);
+    text-shadow: 5px 5px 0 var(--ink);
+  }
+  .note {
+    font-size: 1.6rem;
+  }
+  .sub {
+    font-size: 1.05rem;
+    padding: .8rem 1rem;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .cta {
+    gap: .9rem;
+  }
+  .btn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .block {
+    margin: 0 .8rem 2.2rem;
+    padding: 1.1rem .9rem;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .block h2 {
+    margin-bottom: .8rem;
+  }
+  .block h2 small, .teamh small {
+    display: block !important;
+    margin-top: 0.35rem;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    white-space: normal;
+  }
+  .quotes li {
+    font-size: .95rem;
+    padding: .75rem 0;
+    flex-direction: column;
+    gap: .35rem;
+  }
+  .quotes li span {
+    margin-left: 0;
+    font-size: .74rem;
+  }
+  .bar {
+    height: 2.4rem;
+    margin-bottom: 3.4rem;
+  }
+  .bar em {
+    margin-top: 2.7rem;
+    font-size: .8rem;
+    line-height: 1.3;
+  }
+  .pick button {
+    flex: 1 1 calc(50% - .4rem);
+  }
+  .answer {
+    font-size: 1.4rem;
+    min-height: 5.5rem;
+  }
+  .stats .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .7rem;
+  }
+  .stats .grid > div {
+    padding: .7rem .4rem;
+  }
+  .stats strong {
+    font-size: 1.8rem;
+  }
+  .stats span {
+    font-size: .78rem;
+  }
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .7rem;
+  }
+  .agent {
+    padding: .6rem;
+  }
+  .agent p {
+    font-size: .78rem;
+  }
+  .logos span {
+    font-size: .85rem;
+  }
+  .love blockquote {
+    font-size: 1rem;
+    padding: .6rem .8rem;
+  }
+  .bug {
+    font-size: 2rem;
+  }
+  .cookie {
+    left: .6rem;
+    right: .6rem;
+    transform: none;
+    bottom: calc(.6rem + env(safe-area-inset-bottom));
+    padding: .6rem .7rem;
+    max-width: none;
+  }
+  .cookie p {
+    font-size: .85rem;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .cookie button {
+    flex: 1;
+  }
+  .hint {
+    padding-bottom: 1.8rem;
+    font-size: .8rem;
+  }
+  .ticker {
+    font-size: .85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .team {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
