@@ -267,6 +267,40 @@ footer {
     flex: 1;
   }
 
+  /* Mobile QA Certificate Modal Auto-fit */
+  .qa-modal-backdrop {
+    padding: .6rem;
+  }
+  .qa-certificate {
+    padding: 1.4rem .9rem;
+    border-width: 3px;
+    box-shadow: 6px 6px 0 var(--pink);
+    max-height: calc(100dvh - 1.2rem);
+  }
+  .qa-stamp {
+    position: static;
+    display: inline-block;
+    margin-bottom: .6rem;
+    transform: rotate(-2deg);
+  }
+  .qa-signature-row {
+    flex-direction: column;
+    gap: .7rem;
+    margin: 1rem 0 .9rem;
+  }
+  .qa-sig {
+    flex: 1 1 100%;
+  }
+  .qa-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: .5rem;
+  }
+  .qa-actions .qa-btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .ticker {
     font-size: .85rem;
   }
