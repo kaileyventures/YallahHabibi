@@ -250,18 +250,72 @@
   margin-top: 0.3rem;
 }
 
-/* As Seen On Logos */
+/* As Seen On Logos / Press Mentions */
+.seen h2 small {
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: var(--red);
+}
 .logos {
   display: flex;
   flex-wrap: wrap;
-  gap: .6rem;
+  gap: .8rem;
+  margin-top: .6rem;
 }
-.logos span {
+.logos .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
   font-weight: 700;
-  border: 3px dashed var(--ink);
-  padding: .4rem .7rem;
-  background: var(--paper);
   font-size: .95rem;
+  padding: .5rem .85rem;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  cursor: default;
+  user-select: none;
+  transition: transform .18s cubic-bezier(.34, 1.56, .64, 1), box-shadow .18s, background .15s;
+}
+.logos .badge:nth-child(1) { transform: rotate(-1.5deg); }
+.logos .badge:nth-child(2) { transform: rotate(2deg); background: #fff; }
+.logos .badge:nth-child(3) { transform: rotate(-1deg); }
+.logos .badge:nth-child(4) { transform: rotate(1.5deg); }
+.logos .badge:nth-child(5) { transform: rotate(-2deg); background: var(--mustard); }
+
+.logos .badge:hover {
+  transform: translateY(-4px) scale(1.05) rotate(0deg);
+  box-shadow: 6px 6px 0 var(--ink);
+  background: #fff;
+}
+
+/* Status indicator dots */
+.logos .dot {
+  width: .65rem;
+  height: .65rem;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: #a0aec0;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.logos .dot.live {
+  background: #25D366; /* WhatsApp Green */
+}
+.logos .dot.pulse {
+  background: var(--mint);
+  box-shadow: 0 0 0 0 rgba(110, 242, 193, 0.7);
+  animation: pulse-dot 1.8s infinite;
+}
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(110, 242, 193, 0.8); }
+  70% { box-shadow: 0 0 0 6px rgba(110, 242, 193, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(110, 242, 193, 0); }
+}
+.logos .dot.warn {
+  background: var(--red);
+}
+.logos .dot.click {
+  background: var(--pink);
 }
 
 /* Reviews / What People Say */
