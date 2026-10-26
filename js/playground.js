@@ -35,36 +35,48 @@ export function initPlayground() {
 
   const certTiers = {
     10: {
-      stamp: 'ZERO SALARY APPROVED',
-      badge: '🏆 OFFICIAL CERTIFICATE OF VOLUNTARY LABOR',
-      title: 'UNPAID SENIOR QA ENGINEER',
-      body: `This document solemnly certifies that <b>YOU</b> just spent valuable minutes of your mortal life squashing <b>10 production bugs</b> for free.<br><br>
-             Thanks to your unpaid vigilance, our staging environment did not spontaneously ignite. Add this triumph to your LinkedIn immediately.`,
-      sig1Title: 'CEO / Prompt Whisperer',
-      sig2Title: 'Chief Brain',
+      stampTop: 'GOVT OF UNPAID OVERTIME',
+      stampSeal: 'VERIFIED ZERO EQUITY',
+      badge: 'OFFICIAL CERTIFICATE OF VOLUNTARY LABOUR',
+      certNo: 'CERT-000404-LOL',
+      title: 'SENIOR BUG EXORCIST',
+      body: `Be it known to all mortal developers and venture capitalists that <b>YOU</b> have successfully hunted, cornered, and brutally slaughtered <b>10 production bugs</b> in broad daylight.<br><br>
+             By decree of the <i>Ministry of Delusion</i>, you are hereby granted lifetime immunity from reading documentation, plus full bragging rights to add <b>"Principal Quality Assurance Wizard"</b> to your LinkedIn profile with zero verification.`,
+      sig1Name: 'Yallah Habibi',
+      sig1Title: 'Chief Hallucination Officer',
+      sig2Name: 'ChatGPT & Gemini',
+      sig2Title: 'Supreme Overlords of Excuses',
       claimText: 'Claim $0.00 Salary 💸',
-      claimError: 'Transferring $0.00 to bank... (Error 404: Funds Not Found)'
+      claimError: 'Transferring $0.00 to Swiss account... (Error 404: Funds Stolen by AWS)'
     },
     20: {
-      stamp: 'UNEMPLOYED BEHAVIOR DETECTED',
-      badge: '🎖️ EXECUTIVE ORDER OF CHRONIC PROCRASTINATION',
-      title: 'CHIEF BUG EXORCIST & PRODUCTION MARTYR',
-      body: `Astonishing. You actually sat here and murdered <b>20 innocent bugs</b> on a random developer portfolio.<br><br>
-             Don't you have unread Slack messages? Jira tickets dying in backlog? A warm dinner waiting? You have successfully debugged more code today than the author did all week.`,
+      stampTop: 'CHRONIC PROCRASTINATION',
+      stampSeal: 'TOUCH GRASS IMMEDIATELY',
+      badge: 'HIGH DIPLOMA OF MASSIVE CHROMA CHAOS',
+      certNo: 'CERT-000420-CAP',
+      title: 'SUPREME CODE SLAYER & JIRA RUINER',
+      body: `This imperial document certifies that the bearer has eliminated <b>20 innocent production features (bugs)</b>.<br><br>
+             Our backend servers wept. The staging database broke into applause. You have officially contributed more working code to this repository today than the creator did in the entire previous fiscal quarter.`,
+      sig1Name: 'Yallah Habibi',
       sig1Title: 'Founder & Professional Blamer',
-      sig2Title: 'Vice President of Apologies',
-      claimText: 'Claim Free Emotional Support 🫂',
-      claimError: 'Dispensing sympathy... (Error 500: Server Out of Empathy)'
+      sig2Name: 'Stack Overflow',
+      sig2Title: 'Duplicate Question Closer',
+      claimText: 'Claim Emotional Support Hug 🫂',
+      claimError: 'Error 500: Server is out of empathy. Go drink water.'
     },
     25: {
-      stamp: 'LEGENDARY DEBT ACCUMULATED',
-      badge: '👑 SUPREME GOD OF UNPAID OVERTIME',
-      title: 'HONORARY CO-FOUNDER (0% EQUITY, 100% BLAME)',
-      body: `<b>TWENTY-FIVE BUGS SQUASHED.</b> You are no longer a visitor; you practically own this codebase.<br><br>
-             Effective immediately, any server crash, client complaint, or Stripe billing error is <b>officially your fault</b>. Please log into on-call duty tonight at 3:14 AM.`,
-      sig1Title: 'Chairman of The Board',
-      sig2Title: 'Senior Hallucination Officer',
-      claimText: 'Claim 100% Blame & 0% Equity 📉',
+      stampTop: 'LEGALLY BINDING MARTYRDOM',
+      stampSeal: '100% BLAME • 0% PAY',
+      badge: 'IMPERIAL ORDER OF ON-CALL RESPONSIBILITY',
+      certNo: 'CERT-000999-RIP',
+      title: 'HONORARY CO-FOUNDER & PRODUCTION OWNER',
+      body: `<b>TWENTY-FIVE BUGS SLAIN.</b> The trial has ended. You have ascended.<br><br>
+             Effective immediately, any 3:00 AM server crash, client breakdown, or Stripe dispute is <b>100% your legal fault</b>. Your pager duty begins in 4 minutes. Welcome to the leadership team.`,
+      sig1Name: 'Yallah Habibi',
+      sig1Title: 'Escaped to Costa Rica',
+      sig2Name: 'Vercel & Docker',
+      sig2Title: 'Silent Executioners',
+      claimText: 'Accept 100% Blame & 0% Equity 📉',
       claimError: 'Deploying direct to prod... (Warning: You broke everything)'
     }
   };
@@ -72,12 +84,16 @@ export function initPlayground() {
   function getCertData(killCount) {
     if (certTiers[killCount]) return certTiers[killCount];
     return {
-      stamp: 'INFINITY QA GOD',
-      badge: `⚡ TRANSCENDED MORTAL CODING (${killCount} KILLS)`,
-      title: `LEVEL ${killCount} BREADCRUMB SLAYER`,
-      body: `You have crushed <b>${killCount} bugs</b>. The browser is sweating. The AI is intimidated. Please, touch grass before your mouse catches fire.`,
-      sig1Title: 'Humbled Developer',
-      sig2Title: 'Overheated GPU',
+      stampTop: 'BEYOND HUMAN SANITY',
+      stampSeal: 'TERMINAL LEVEL REACHED',
+      badge: `⚡ TRANSCENDED MORTAL REALITY (${killCount} KILLS)`,
+      certNo: `CERT-${killCount}-GODMODE`,
+      title: `LEVEL ${killCount} DEITY OF PURE CHAOS`,
+      body: `You have assassinated <b>${killCount} bugs</b>. The browser cache is crying. The CPU is sweating. The AI has unplugged itself in sheer terror. Please shut down your laptop and walk into the sunlight.`,
+      sig1Name: 'Humbled Developer',
+      sig1Title: 'Defeated by User',
+      sig2Name: 'Overheated GPU',
+      sig2Title: 'Thermal Throttling at 99°C',
       claimText: 'Order Grass Delivery 🌿',
       claimError: 'Grass delivery dispatched to your coordinates!'
     };
@@ -87,23 +103,44 @@ export function initPlayground() {
     const data = getCertData(killCount);
     modalBackdrop.innerHTML = `
       <div class="qa-certificate">
-        <div class="qa-stamp">${data.stamp}</div>
-        <div class="qa-badge">${data.badge}</div>
-        <h2>${data.title}</h2>
-        <p class="qa-cert-body">${data.body}</p>
-        <div class="qa-signature-row">
-          <div class="qa-sig">
-            <span class="qa-sig-name">Yallah Habibi</span>
-            <span class="qa-sig-title">${data.sig1Title}</span>
+        <div class="qa-cert-inner">
+          <div class="qa-top-bar">
+            <span class="qa-cert-id">NO: ${data.certNo}</span>
+            <div class="qa-rubber-stamp">${data.stampTop}</div>
           </div>
-          <div class="qa-sig">
-            <span class="qa-sig-name">Claude & Gemini</span>
-            <span class="qa-sig-title">${data.sig2Title}</span>
+          
+          <div class="qa-badge">${data.badge}</div>
+          <h2 class="qa-cert-title">${data.title}</h2>
+          
+          <div class="qa-decor-line"><span>★ ★ ★</span></div>
+          
+          <p class="qa-cert-body">${data.body}</p>
+          
+          <div class="qa-cert-footer">
+            <div class="qa-wax-seal">
+              <div class="wax-inner">
+                <span class="wax-star">★</span>
+                <span class="wax-text">${data.stampSeal}</span>
+              </div>
+            </div>
+
+            <div class="qa-signatures">
+              <div class="qa-sig">
+                <span class="qa-sig-name">${data.sig1Name}</span>
+                <span class="qa-sig-title">${data.sig1Title}</span>
+              </div>
+              <div class="qa-sig">
+                <span class="qa-sig-name">${data.sig2Name}</span>
+                <span class="qa-sig-title">${data.sig2Title}</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="qa-actions">
-          <button type="button" class="qa-btn claim" id="qa-claim">${data.claimText}</button>
-          <button type="button" class="qa-btn close" id="qa-close">Dismiss (Back to Slaying) 🏹</button>
+
+          <div class="qa-actions">
+            <button type="button" class="qa-btn claim" id="qa-claim">${data.claimText}</button>
+            <button type="button" class="qa-btn dl" id="qa-dl">📥 Download Certificate (.png)</button>
+            <button type="button" class="qa-btn close" id="qa-close">Dismiss (Back to Slaying) 🏹</button>
+          </div>
         </div>
       </div>
     `;
@@ -112,6 +149,7 @@ export function initPlayground() {
     modalBackdrop.classList.add('show');
 
     const claimBtn = modalBackdrop.querySelector('#qa-claim');
+    const dlBtn = modalBackdrop.querySelector('#qa-dl');
     const closeBtn = modalBackdrop.querySelector('#qa-close');
 
     if (claimBtn) {
@@ -122,6 +160,180 @@ export function initPlayground() {
         setTimeout(() => {
           closeCertificate();
         }, 1900);
+      });
+    }
+
+    if (dlBtn) {
+      dlBtn.addEventListener('click', (e) => {
+        burst(e.clientX, e.clientY, ['🖼️', '📜', '🖨️', '✨'], 24);
+        dlBtn.textContent = 'Generating Official Diploma...';
+        dlBtn.disabled = true;
+
+        // Render legitimate visual diploma using HTML5 Canvas
+        const canvas = document.createElement('canvas');
+        canvas.width = 1200;
+        canvas.height = 850;
+        const ctx = canvas.getContext('2d');
+
+        // 1. Parchment Background
+        ctx.fillStyle = '#fffdf7';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // 2. Neo-Brutalist Frame Borders
+        ctx.strokeStyle = '#1d1033';
+        ctx.lineWidth = 12;
+        ctx.strokeRect(20, 20, canvas.width - 40, canvas.height - 40);
+
+        ctx.lineWidth = 3;
+        ctx.strokeRect(34, 34, canvas.width - 68, canvas.height - 68);
+
+        // Corner Corner Accents
+        ctx.fillStyle = '#ff8fd0';
+        ctx.fillRect(10, 10, 24, 24);
+        ctx.fillRect(canvas.width - 34, 10, 24, 24);
+        ctx.fillRect(10, canvas.height - 34, 24, 24);
+        ctx.fillRect(canvas.width - 34, canvas.height - 34, 24, 24);
+
+        // 3. Document Tracking Number
+        ctx.fillStyle = '#6b7280';
+        ctx.font = 'bold 16px monospace';
+        ctx.textAlign = 'left';
+        ctx.fillText(`SERIAL NO: ${data.certNo}`, 55, 75);
+
+        // 4. Red Rubber Stamp (Angled)
+        ctx.save();
+        ctx.translate(canvas.width - 240, 75);
+        ctx.rotate(0.08);
+        ctx.strokeStyle = '#ff4d2e';
+        ctx.lineWidth = 3.5;
+        ctx.setLineDash([6, 4]);
+        ctx.strokeRect(-10, -22, 230, 36);
+        ctx.fillStyle = '#ff4d2e';
+        ctx.font = '900 15px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(data.stampTop, 105, 2);
+        ctx.restore();
+
+        // 5. Ministry Badge Pill
+        ctx.fillStyle = '#1d1033';
+        const badgeWidth = 560;
+        ctx.fillRect((canvas.width - badgeWidth) / 2, 115, badgeWidth, 38);
+        ctx.fillStyle = '#ffd23f';
+        ctx.font = 'bold 15px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(data.badge, canvas.width / 2, 140);
+
+        // 6. Main Certificate Title
+        ctx.fillStyle = '#1d1033';
+        ctx.font = '900 44px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(data.title, canvas.width / 2, 205);
+
+        // Star Divider
+        ctx.fillStyle = '#ffd23f';
+        ctx.font = '22px sans-serif';
+        ctx.fillText('★   ★   ★', canvas.width / 2, 245);
+
+        // 7. Body Text (Legal Proclamation)
+        ctx.fillStyle = '#1d1033';
+        ctx.font = '500 21px sans-serif';
+        ctx.textAlign = 'center';
+        
+        const lines = [
+          `Be it officially known to all mortal software engineers and venture capitalists that`,
+          `YOU have successfully hunted, cornered, and brutally slaughtered ${killCount} production bugs.`,
+          ``,
+          `By supreme decree of the Ministry of Delusion, you are hereby granted lifetime immunity`,
+          `from writing unit tests, and full bragging rights to call yourself Senior QA Legend on LinkedIn.`,
+          ``,
+          `* This credential holds exactly $0.00 cash value and will definitely be questioned by HR. *`
+        ];
+
+        let startY = 300;
+        lines.forEach((line) => {
+          if (line.includes('Senior QA Legend') || line.includes(`${killCount} production bugs`)) {
+            ctx.font = 'bold 21px sans-serif';
+            ctx.fillStyle = '#ff4d2e';
+          } else if (line.includes('$0.00 cash value')) {
+            ctx.font = 'italic 16px sans-serif';
+            ctx.fillStyle = '#6b7280';
+          } else {
+            ctx.font = '500 20px sans-serif';
+            ctx.fillStyle = '#1d1033';
+          }
+          ctx.fillText(line, canvas.width / 2, startY);
+          startY += 34;
+        });
+
+        // 8. Bottom Border / Divider
+        ctx.strokeStyle = '#1d1033';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([8, 6]);
+        ctx.beginPath();
+        ctx.moveTo(80, 580);
+        ctx.lineTo(canvas.width - 80, 580);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // 9. Official Wax Seal (Gold/Mustard Round Emblem)
+        const sealX = 220;
+        const sealY = 680;
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(sealX, sealY, 55, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffd23f';
+        ctx.fill();
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = '#1d1033';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(sealX, sealY, 44, 0, Math.PI * 2);
+        ctx.lineWidth = 2;
+        ctx.setLineDash([4, 3]);
+        ctx.stroke();
+
+        ctx.fillStyle = '#1d1033';
+        ctx.font = 'bold 24px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('★', sealX, sealY - 8);
+        ctx.font = '900 10px sans-serif';
+        ctx.fillText('VERIFIED JUNK', sealX, sealY + 12);
+        ctx.fillText('0% EQUITY', sealX, sealY + 26);
+        ctx.restore();
+
+        // 10. Official Signatures
+        // Sig 1: Yallah Habibi
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 36px cursive, sans-serif';
+        ctx.fillStyle = '#ff4d2e';
+        ctx.fillText(data.sig1Name, 580, 670);
+        ctx.font = 'bold 13px sans-serif';
+        ctx.fillStyle = '#1d1033';
+        ctx.fillText(data.sig1Title.toUpperCase(), 580, 695);
+
+        // Sig 2: AI Overlords
+        ctx.font = 'bold 36px cursive, sans-serif';
+        ctx.fillStyle = '#ff4d2e';
+        ctx.fillText(data.sig2Name, 920, 670);
+        ctx.font = 'bold 13px sans-serif';
+        ctx.fillStyle = '#1d1033';
+        ctx.fillText(data.sig2Title.toUpperCase(), 920, 695);
+
+        // 11. Download as High-Resolution PNG
+        canvas.toBlob((blob) => {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `OFFICIAL-DIPLOMA-${killCount}-BUGS.png`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+
+          dlBtn.textContent = '🖼️ Diploma Downloaded as PNG! (Frame It)';
+          dlBtn.disabled = true;
+        }, 'image/png');
       });
     }
 

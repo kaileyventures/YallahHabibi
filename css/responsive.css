@@ -279,29 +279,70 @@ footer {
     flex: 1;
   }
 
-  /* Mobile QA Certificate Modal Auto-fit */
+  /* Mobile QA Certificate Modal: Guaranteed Fit & No Cut-off */
   .qa-modal-backdrop {
-    padding: .6rem;
+    padding: .5rem;
+    align-items: center;
   }
   .qa-certificate {
-    padding: 1.4rem .9rem;
+    padding: .5rem;
     border-width: 3px;
     box-shadow: 6px 6px 0 var(--pink);
-    max-height: calc(100dvh - 1.2rem);
+    max-height: calc(100vh - 1rem);
+    max-height: calc(100dvh - 1rem);
+    width: 100%;
+    margin: auto;
   }
-  .qa-stamp {
-    position: static;
-    display: inline-block;
-    margin-bottom: .6rem;
-    transform: rotate(-2deg);
+  .qa-cert-inner {
+    padding: 1.1rem .85rem;
   }
-  .qa-signature-row {
+  .qa-top-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .4rem;
+  }
+  .qa-rubber-stamp {
+    font-size: .68rem;
+    padding: .2rem .45rem;
+    transform: rotate(-1deg);
+  }
+  .qa-cert-title {
+    font-size: 1.35rem;
+  }
+  .qa-cert-body {
+    font-size: .88rem;
+    line-height: 1.4;
+    margin: .4rem auto 1rem;
+  }
+  .qa-cert-footer {
     flex-direction: column;
-    gap: .7rem;
-    margin: 1rem 0 .9rem;
+    align-items: center;
+    gap: .8rem;
+    padding-top: .8rem;
+    margin-bottom: 1rem;
   }
-  .qa-sig {
-    flex: 1 1 100%;
+  .qa-wax-seal {
+    width: 3.8rem;
+    height: 3.8rem;
+    transform: rotate(0deg);
+  }
+  .wax-inner {
+    width: 3rem;
+    height: 3rem;
+  }
+  .wax-star {
+    font-size: .75rem;
+  }
+  .wax-text {
+    font-size: .38rem;
+  }
+  .qa-signatures {
+    width: 100%;
+    justify-content: space-around;
+    gap: .8rem;
+  }
+  .qa-sig-name {
+    font-size: 1.3rem;
   }
   .qa-actions {
     flex-direction: column;
@@ -311,6 +352,9 @@ footer {
   .qa-actions .qa-btn {
     width: 100%;
     text-align: center;
+    min-height: 44px;
+    font-size: .88rem;
+    padding: .6rem;
   }
 
   .ticker {
