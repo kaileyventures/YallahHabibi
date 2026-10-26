@@ -94,13 +94,10 @@
 }
 
 /* AI Team Grid & SVG Icons */
-.teamh {
-  font-family: 'Bowlby One', sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin: 2.6rem 0 1rem;
+.team-block h2 {
+  margin-bottom: 1.2rem;
 }
-.teamh small {
+.team-block h2 small {
   font-family: 'Caveat', cursive;
   font-size: 1.3rem;
   color: var(--red);

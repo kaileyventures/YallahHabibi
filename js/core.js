@@ -98,8 +98,6 @@ export function initCore() {
   // Back to top button
   const topBtn = document.getElementById('top');
   if (topBtn) {
-    topBtn.addEventListener('mouseenter', () => topBtn.classList.add('shake'));
-    topBtn.addEventListener('mouseleave', () => topBtn.classList.remove('shake'));
     topBtn.addEventListener('click', (e) => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
