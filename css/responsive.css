@@ -21,117 +21,229 @@ footer {
     transform: none;
     box-shadow: 5px 5px 0 var(--ink);
   }
-  .agent:hover {
+  .agent:hover, .logos .badge:hover, .lie-item:hover {
     transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.5rem 1.2rem 3rem;
+  }
+  .block {
+    margin: 0 1rem 2.5rem;
+    padding: 1.25rem 1.1rem;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .team {
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
   }
 }
 
 @media (max-width: 640px) {
   body {
     font-size: 16px;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
   .hero {
-    padding: 2rem 1rem 3rem;
+    padding: 2rem 0.9rem 2.6rem;
   }
   h1 {
+    font-size: clamp(3rem, 16vw, 4.8rem);
     -webkit-text-stroke: 2px var(--ink);
     text-shadow: 5px 5px 0 var(--ink);
+    margin: .3rem 0 1.2rem;
   }
   .note {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .sub {
     font-size: 1.05rem;
-    padding: .8rem 1rem;
+    padding: .85rem 1rem;
     box-shadow: 4px 4px 0 var(--ink);
+    width: 100%;
+    max-width: 100%;
   }
   .cta {
-    gap: .9rem;
+    gap: .8rem;
+    margin-top: 1.6rem;
   }
   .btn {
     flex: 1 1 100%;
     text-align: center;
+    justify-content: center;
   }
   .block {
-    margin: 0 .8rem 2.2rem;
-    padding: 1.1rem .9rem;
+    margin: 0 0.75rem 2rem;
+    padding: 1.15rem 0.95rem;
     box-shadow: 5px 5px 0 var(--ink);
+    border-width: 3px;
+    width: auto;
   }
   .block h2 {
+    font-size: 1.5rem;
     margin-bottom: .8rem;
+    line-height: 1.15;
   }
   .block h2 small, .teamh small {
     display: block !important;
     margin-top: 0.35rem;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     line-height: 1.2;
     white-space: normal;
   }
-  .quotes li {
-    font-size: .95rem;
-    padding: .75rem 0;
+
+  /* Vibe generator form auto-fit */
+  .vibebox {
+    padding: .85rem;
+  }
+  .vibebox .row {
     flex-direction: column;
-    gap: .35rem;
+    gap: .6rem;
   }
-  .quotes li span {
-    margin-left: 0;
-    font-size: .74rem;
+  .vibebox input {
+    width: 100%;
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+    padding: .7rem;
   }
+  .vibebox button {
+    width: 100%;
+    padding: .75rem;
+  }
+
+  /* Quotes / Lie detector mobile auto-fit */
+  .quotes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+  }
+  .lie-status-pill {
+    font-size: .75rem;
+    padding: .25rem .55rem;
+    word-break: break-word;
+  }
+  .lie-item {
+    padding: .75rem .85rem;
+  }
+  .lie-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+  }
+  .quote-text {
+    font-size: 1rem;
+  }
+  .truth-stamp {
+    font-size: .82rem;
+    padding: .3rem .55rem;
+  }
+
+  /* Skills & bars */
   .bar {
     height: 2.4rem;
-    margin-bottom: 3.4rem;
+    margin-bottom: 3.6rem;
   }
   .bar em {
     margin-top: 2.7rem;
     font-size: .8rem;
     line-height: 1.3;
   }
+
+  /* As seen on badges */
+  .logos {
+    gap: .6rem;
+  }
+  .logos .badge {
+    font-size: .85rem;
+    padding: .45rem .65rem;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  /* Estimates */
   .pick button {
-    flex: 1 1 calc(50% - .4rem);
+    flex: 1 1 100%;
+    text-align: center;
   }
   .answer {
-    font-size: 1.4rem;
-    min-height: 5.5rem;
+    font-size: 1.3rem;
+    min-height: 5rem;
   }
+
+  /* Stats grid */
   .stats .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: .7rem;
+    gap: .6rem;
   }
   .stats .grid > div {
-    padding: .7rem .4rem;
+    padding: .65rem .4rem;
   }
   .stats strong {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   .stats span {
     font-size: .78rem;
   }
+
+  /* Team grid: 2 clean columns */
   .team {
     grid-template-columns: repeat(2, 1fr);
-    gap: .7rem;
+    gap: .65rem;
   }
   .agent {
-    padding: .6rem;
+    padding: .65rem .55rem;
+  }
+  .agent .ico {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+  .agent b {
+    font-size: .95rem;
   }
   .agent p {
     font-size: .78rem;
+    line-height: 1.25;
   }
-  .logos span {
-    font-size: .85rem;
-  }
+
+  /* Love / Testimonials */
   .love blockquote {
-    font-size: 1rem;
+    font-size: .98rem;
     padding: .6rem .8rem;
+    margin: .6rem 0;
   }
+
+  /* Contact Cards */
+  .contact-card {
+    padding: 1.1rem .9rem;
+    margin-bottom: 1rem;
+  }
+  .mail {
+    font-size: clamp(1rem, 5vw, 1.35rem);
+    word-break: break-all;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2.8rem .9rem calc(2rem + env(safe-area-inset-bottom));
+  }
+  .footer-roast-grid {
+    grid-template-columns: 1fr;
+    gap: .8rem;
+  }
+
+  /* Bug size adjustment */
   .bug {
     font-size: 2rem;
   }
+
+  /* Mobile Cookie Bar */
   .cookie {
     left: .6rem;
     right: .6rem;
     transform: none;
     bottom: calc(.6rem + env(safe-area-inset-bottom));
-    padding: .6rem .7rem;
+    padding: .65rem .75rem;
     max-width: none;
   }
   .cookie p {
@@ -142,21 +254,24 @@ footer {
   .cookie button {
     flex: 1;
   }
-  .hint {
-    padding-bottom: 1.8rem;
-    font-size: .8rem;
-  }
+
   .ticker {
     font-size: .85rem;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .team {
     grid-template-columns: 1fr;
   }
   h1 {
-    font-size: 3.2rem;
+    font-size: 2.9rem;
+  }
+  .stats .grid {
+    grid-template-columns: 1fr;
+  }
+  .bar {
+    margin-bottom: 4.2rem;
   }
 }
 
