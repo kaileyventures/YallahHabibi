@@ -26,18 +26,64 @@
 <meta name="twitter:description" content="The person behind that tiny footer text. Developer portfolio, 100% vibes and prompt engineering.">
 <meta name="twitter:image" content="https://yallahhabibi.is-a.dev/favicon.svg">
 
-<!-- JSON-LD Structured Data for Google Rich Snippets -->
+<!-- JSON-LD Structured Data for Google Rich Snippets & Knowledge Graph -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Yallah Habibi",
-  "url": "https://yallahhabibi.is-a.dev/",
-  "jobTitle": "Creative Web Developer",
-  "description": "Chief Hallucination Officer, Prompt Engineer, and Creative Developer.",
-  "sameAs": [
-    "https://github.com/kaileyventures/YallahHabibi",
-    "https://t.me/YallahHabibi"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://yallahhabibi.is-a.dev/#person",
+      "name": "Yallah Habibi",
+      "url": "https://yallahhabibi.is-a.dev/",
+      "jobTitle": "Creative Vibe Coder, Web Developer & AI Prompt Engineer",
+      "description": "Chief Hallucination Officer, Prompt Engineer, and Creative Developer.",
+      "sameAs": [
+        "https://github.com/kaileyventures/YallahHabibi",
+        "https://t.me/YallahHabibi"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://yallahhabibi.is-a.dev/#website",
+      "url": "https://yallahhabibi.is-a.dev/",
+      "name": "Yallah Habibi",
+      "description": "Creative Vibe Coder & The person behind that tiny footer text.",
+      "publisher": {
+        "@id": "https://yallahhabibi.is-a.dev/#person"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yallahhabibi.is-a.dev/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Yallah Habibi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yallah Habibi is a creative bibe coder, web developer, prompt engineer, and the developer behind that tiny footer text you clicked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact or hire Yallah Habibi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can connect directly via Telegram @YallahHabibi or send an email to hi@yallahhabibi.is-a.dev."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What tech stack and AI tools does Yallah Habibi use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The stack spans HTML5, modern CSS, Vanilla JS, and collaboration with AI agents including Claude, ChatGPT, Gemini, and Cursor."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
