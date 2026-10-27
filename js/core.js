@@ -118,4 +118,38 @@ export function initCore() {
       if (favIcon) favIcon.href = 'favicon.svg';
     }
   });
+
+  // Interactive Press Grid Cards
+  const pressCards = document.querySelectorAll('.press-card');
+  const pressPill = document.querySelector('.press-radar-pill');
+  if (pressCards.length > 0) {
+    import('./burst.js').then(({ burst }) => {
+      const pressReactions = [
+        'Global Reach: 1 IP Address',
+        'Viral Status: Mom Sent To Family Group',
+        'Server Status: 100% CPU Under Zero Load',
+        'Duress Level: Friend Still Hostage',
+        'Audit Result: 0% Code Coverage, 100% Vibes'
+      ];
+      let pressClicks = 0;
+
+      pressCards.forEach((card) => {
+        card.addEventListener('click', (e) => {
+          pressClicks++;
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX || rect.left + rect.width / 2;
+          const y = e.clientY || rect.top + rect.height / 2;
+          burst(x, y, ['📰', '🔥', '👀', '📱', '⚡'], 5);
+
+          if (pressPill) {
+            pressPill.innerHTML = `<i class="dot pulse"></i> ${pressReactions[pressClicks % pressReactions.length]}`;
+            pressPill.style.background = '#ffd23f';
+            setTimeout(() => {
+              pressPill.style.background = '';
+            }, 600);
+          }
+        });
+      });
+    }).catch(() => {});
+  }
 }

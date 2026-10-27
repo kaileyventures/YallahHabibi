@@ -13,11 +13,11 @@ export function initLieDetector() {
   if (!items.length) return;
 
   const reactions = [
-    '🚨 POLYGRAPH TRIGGERED: 100% UNADULTERATED CAP',
-    '🚨 LIE DETECTED: HEART RATE EXCEEDED 180 BPM',
-    '🚨 GUILTY AS CHARGED: JURY SENTENCED YOU TO 40 HOURS BUG FIXING',
-    '🚨 MAXIMUM DEFLECTION: BLAMED ON DNS & INTERNS',
-    '🚨 CONFESSION EXTRACTED: CLIENT DEMANDED REFUND'
+    '🚨 CORPORATE LIES DECODED: 100% UNADULTERATED CAP',
+    '🚨 MEETING REALITY EXPOSED: CLIENT IN SHAMBLES',
+    '🚨 TRANSLATION COMPLETE: JURY SENTENCED YOU TO 40 HOURS BUG FIXING',
+    '🚨 MAXIMUM DEFLECTION: BLAMED ON DNS & CLAUDE OUTAGE',
+    '🚨 CONFESSION EXTRACTED: CLIENT DEMANDED FULL REFUND'
   ];
 
   let confessedCount = 0;
@@ -36,7 +36,7 @@ export function initLieDetector() {
       // Audio-visual feedback
       confessedCount++;
       if (statusPill) {
-        statusPill.innerHTML = `<i class="radar" style="background:#ffd23f"></i> CONFESSION #${confessedCount}: CAUGHT RED-HANDED!`;
+        statusPill.innerHTML = `<i class="radar" style="background:#ffd23f"></i> TRANSLATION #${confessedCount}: CAUGHT IN 4K!`;
         statusPill.style.background = '#ff4d2e';
         statusPill.style.color = '#fff';
 

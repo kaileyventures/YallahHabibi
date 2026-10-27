@@ -21,7 +21,7 @@ footer {
     transform: none;
     box-shadow: 5px 5px 0 var(--ink);
   }
-  .agent:hover, .logos .badge:hover, .lie-item:hover {
+  .agent:hover, .press-card:hover, .lie-item:hover {
     transform: none;
   }
 }
@@ -147,20 +147,33 @@ footer {
     padding: .25rem .55rem;
     word-break: break-word;
   }
-  .lie-item {
-    padding: .75rem .85rem;
-  }
-  .lie-head {
+  /* Client Translation Guide Mobile Overrides */
+  .quotes-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: .4rem;
+    gap: .5rem;
   }
-  .quote-text {
-    font-size: 1rem;
+  .lie-status-pill {
+    font-size: .75rem;
+    padding: .25rem .55rem;
   }
-  .truth-stamp {
-    font-size: .82rem;
-    padding: .3rem .55rem;
+  .lie-list {
+    grid-template-columns: 1fr;
+    gap: .85rem;
+  }
+  .lie-item.card-neo {
+    padding: 1rem .95rem;
+    gap: .65rem;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .card-neo .quote-text {
+    font-size: 1.05rem;
+  }
+  .truth-box {
+    padding: .75rem .85rem;
+  }
+  .truth-text {
+    font-size: .88rem;
   }
 
   /* Skills & bars */
@@ -174,15 +187,36 @@ footer {
     line-height: 1.3;
   }
 
-  /* As seen on badges */
-  .logos {
-    gap: .6rem;
+  /* As seen on Press Grid Mobile Overrides */
+  .seen-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
   }
-  .logos .badge {
-    font-size: .85rem;
-    padding: .45rem .65rem;
-    flex: 1 1 auto;
-    justify-content: center;
+  .press-radar-pill {
+    font-size: .75rem;
+    padding: .25rem .55rem;
+  }
+  .press-grid {
+    grid-template-columns: 1fr;
+    gap: .85rem;
+  }
+  .press-card {
+    padding: .9rem .95rem;
+    gap: .5rem;
+    box-shadow: 3.5px 3.5px 0 var(--ink);
+  }
+  .press-title {
+    font-size: 1rem;
+  }
+  .press-meta {
+    padding-top: .45rem;
+  }
+  .press-stat {
+    font-size: .78rem;
+  }
+  .press-quote {
+    font-size: 1rem;
   }
 
   /* Estimates */
