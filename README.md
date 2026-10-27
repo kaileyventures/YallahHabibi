@@ -1,5 +1,12 @@
 <div align="center">
 
+<!-- Full HD Official Logo Banner -->
+<a href="https://yallahhabibi.is-a.dev/">
+  <img src="logo.png" alt="Yallah Habibi Logo" width="340" />
+</a>
+
+<br/>
+
 <!-- Animated Caps Typewriter Banner -->
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Bowlby+One&size=38&pause=1000&color=FF8FD0&center=true&vCenter=true&random=false&width=750&height=90&lines=YALLAH+HABIBI+%F0%9F%A4%99;CHIEF+HALLUCINATION+OFFICER;CODE+WRITTEN+BY+PANIC+%26+LLMS;TESTING+DIRECTLY+IN+PROD;BUILT+AT+3%3A14+AM+(DO+NOT+TOUCH)" alt="Yallah Habibi Typing Banner" />
