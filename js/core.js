@@ -106,16 +106,26 @@ export function initCore() {
 
   // Tab visibility change guilt trip
   const originalTitle = document.title;
-  const favIcon = document.querySelector('link[rel="icon"]');
+  const favIconLinks = document.querySelectorAll('link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]');
+  const originalFavicons = Array.from(favIconLinks).map((link) => ({
+    el: link,
+    href: link.getAttribute('href'),
+    type: link.getAttribute('type')
+  }));
+
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       document.title = "Come back. I wasn't done judging you.";
-      if (favIcon) {
-        favIcon.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>👀</text></svg>";
-      }
+      favIconLinks.forEach((link) => {
+        link.type = 'image/svg+xml';
+        link.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>👀</text></svg>";
+      });
     } else {
       document.title = originalTitle;
-      if (favIcon) favIcon.href = 'favicon.svg';
+      originalFavicons.forEach((item) => {
+        if (item.type) item.el.type = item.type;
+        item.el.href = item.href;
+      });
     }
   });
 
