@@ -219,13 +219,6 @@
   gap: 1.2rem;
 }
 
-@media (max-width: 680px) {
-  .lie-list {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
 .lie-item.card-neo {
   background: #fff;
   border: 3px solid var(--ink);
@@ -518,7 +511,7 @@
 .press-card[data-press="local"] .press-tag { background: var(--mint); color: var(--ink); }
 .press-card[data-press="tab"] .press-tag { background: var(--mustard); color: var(--ink); }
 .press-card[data-press="friend"] .press-tag { background: var(--pink); color: #fff; }
-.press-card[data-press="footer"] .press-tag { background: var(--yellow); color: var(--ink); }
+.press-card[data-press="footer"] .press-tag { background: var(--mustard); color: var(--ink); }
 .press-card[data-press="console"] .press-tag { background: var(--red); color: #fff; }
 
 .press-title {
