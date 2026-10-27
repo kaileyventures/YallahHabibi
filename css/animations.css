@@ -42,31 +42,47 @@
 .cookie {
   position: fixed;
   left: 50%;
-  bottom: 1rem;
+  bottom: 1.2rem;
   transform: translateX(-50%);
-  z-index: 30;
+  z-index: 9999;
   background: var(--mustard);
   border: 3px solid var(--ink);
   box-shadow: 6px 6px 0 var(--ink);
-  padding: .8rem 1rem;
+  padding: .8rem 1.2rem;
   display: flex;
-  gap: .6rem;
+  gap: .8rem;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 94vw;
-  transition: opacity .3s, transform .3s;
+  pointer-events: auto;
+  user-select: none;
+  transition: opacity .25s ease, transform .25s ease;
 }
 .cookie p {
   margin: 0;
   font-weight: 700;
+  color: var(--ink);
 }
 .cookie button {
   font: 700 .95rem 'Space Grotesk', sans-serif;
   border: 3px solid var(--ink);
   background: #fff;
-  padding: .4rem .8rem;
+  color: var(--ink);
+  padding: .45rem .9rem;
   cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 3px 3px 0 var(--ink);
+  transition: transform .1s, box-shadow .1s, background .15s;
+}
+.cookie button:hover {
+  background: var(--pink);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+.cookie button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 var(--ink);
 }
 .cookie.gone {
   display: none !important;
@@ -187,6 +203,73 @@
   text-shadow: 1px 1px 0 var(--ink);
 }
 
+/* Name Customizer in Certificate */
+.qa-name-customizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.3rem auto 0.6rem;
+  max-width: 22rem;
+  width: 100%;
+}
+.qa-name-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+.qa-name-input {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--ink);
+  background: #fff;
+  border: 2px dashed var(--ink);
+  padding: 0.35rem 0.8rem;
+  width: 100%;
+  max-width: 17rem;
+  outline: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.qa-name-input:focus {
+  background: #fff8db;
+  border-style: solid;
+}
+
+/* Official Hero Recipient Showcase Ribbon */
+.qa-presented-block {
+  margin: 0.6rem auto 1rem;
+  text-align: center;
+}
+.qa-presented-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.qa-recipient-banner {
+  display: inline-block;
+  background: var(--mustard);
+  color: var(--red);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.4rem, 4vw, 1.85rem);
+  line-height: 1.1;
+  padding: 0.4rem 1.4rem;
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  letter-spacing: 0.04em;
+  transform: rotate(-0.5deg);
+  min-width: 14rem;
+  word-break: break-word;
+}
+
 .qa-cert-body {
   font-size: clamp(0.92rem, 2.6vw, 1.05rem);
   line-height: 1.5;
@@ -198,6 +281,15 @@
   color: var(--red);
   background: rgba(255, 210, 63, 0.3);
   padding: 0 0.2rem;
+}
+.qa-recipient-name {
+  color: var(--red);
+  font-weight: 800;
+  background: var(--mustard);
+  padding: 0.1rem 0.4rem;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  display: inline-block;
 }
 .qa-cert-body i {
   font-style: italic;

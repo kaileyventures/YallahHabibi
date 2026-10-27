@@ -494,8 +494,8 @@
 
 <div class="cookie" id="cookie" role="dialog" aria-label="Cookie notice">
   <p>🍪 This site uses zero cookies. Here, have a fake one anyway.</p>
-  <button type="button" id="eat">Eat cookie</button>
-  <button type="button" id="eat2">Eat it sadder</button>
+  <button type="button" id="eat" onclick="this.closest('.cookie').remove();try{sessionStorage.setItem('cookie_eaten','true');}catch(e){}">Eat cookie</button>
+  <button type="button" id="eat2" onclick="this.closest('.cookie').remove();try{sessionStorage.setItem('cookie_eaten','true');}catch(e){}">Eat it sadder</button>
 </div>
 
 <script type="module" src="script.js"></script>

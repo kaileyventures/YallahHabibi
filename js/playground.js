@@ -114,7 +114,18 @@ export function initPlayground() {
           
           <div class="qa-decor-line"><span>★ ★ ★</span></div>
           
-          <p class="qa-cert-body">${data.body}</p>
+          <div class="qa-name-customizer">
+            <label for="qa-recipient-input" class="qa-name-label">Type Your Name to Personalize:</label>
+            <input type="text" id="qa-recipient-input" class="qa-name-input" value="YOUR NAME" maxlength="30" placeholder="Type your name here..." autocomplete="off" spellcheck="false" />
+          </div>
+
+          <!-- Official Recipient Showcase Banner -->
+          <div class="qa-presented-block">
+            <span class="qa-presented-label">THIS DIPLOMA IS PROUDLY PRESENTED TO:</span>
+            <div class="qa-recipient-banner" id="qa-recipient-display">YOUR NAME</div>
+          </div>
+
+          <p class="qa-cert-body" id="qa-cert-body">${data.body.replace(/\bYOU\b/g, 'the named developer')}</p>
           
           <div class="qa-cert-footer">
             <div class="qa-wax-seal">
@@ -152,6 +163,21 @@ export function initPlayground() {
     const dlBtn = modalBackdrop.querySelector('#qa-dl');
     const closeBtn = modalBackdrop.querySelector('#qa-close');
 
+    const recipientInput = modalBackdrop.querySelector('#qa-recipient-input');
+    const recipientDisplay = modalBackdrop.querySelector('#qa-recipient-display');
+    let recipientName = 'YOUR NAME';
+
+    if (recipientInput && recipientDisplay) {
+      recipientInput.addEventListener('input', () => {
+        recipientName = recipientInput.value.trim() || 'YOUR NAME';
+        recipientDisplay.textContent = recipientName.toUpperCase();
+      });
+      // Select all text on focus for instant typing
+      recipientInput.addEventListener('focus', () => {
+        recipientInput.select();
+      });
+    }
+
     if (claimBtn) {
       claimBtn.addEventListener('click', (e) => {
         burst(e.clientX, e.clientY, ['💸', '📉', '💨', '🤡', '☕'], 24);
@@ -168,6 +194,8 @@ export function initPlayground() {
         burst(e.clientX, e.clientY, ['🖼️', '📜', '🖨️', '✨'], 24);
         dlBtn.textContent = 'Generating Official Diploma...';
         dlBtn.disabled = true;
+
+        const currentName = (recipientInput ? recipientInput.value.trim() : '') || 'YOU';
 
         // Render legitimate visual diploma using HTML5 Canvas
         const canvas = document.createElement('canvas');
@@ -225,23 +253,42 @@ export function initPlayground() {
 
         // 6. Main Certificate Title
         ctx.fillStyle = '#1d1033';
-        ctx.font = '900 44px sans-serif';
+        ctx.font = '900 42px sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText(data.title, canvas.width / 2, 205);
+        ctx.fillText(data.title, canvas.width / 2, 200);
 
         // Star Divider
         ctx.fillStyle = '#ffd23f';
-        ctx.font = '22px sans-serif';
-        ctx.fillText('★   ★   ★', canvas.width / 2, 245);
+        ctx.font = '20px sans-serif';
+        ctx.fillText('★   ★   ★', canvas.width / 2, 235);
+
+        // 6.5 Dedicated Recipient Awarded-To Ribbon Banner
+        ctx.fillStyle = '#718096';
+        ctx.font = 'bold 14px sans-serif';
+        ctx.fillText('PROUDLY PRESENTED TO', canvas.width / 2, 270);
+
+        // Highlighted Name Box
+        ctx.font = '900 36px sans-serif';
+        const nameText = currentName.toUpperCase();
+        const textMetrics = ctx.measureText(nameText);
+        const nameBoxWidth = Math.max(textMetrics.width + 60, 280);
+        
+        ctx.fillStyle = '#ffd23f';
+        ctx.fillRect((canvas.width - nameBoxWidth) / 2, 285, nameBoxWidth, 48);
+        ctx.strokeStyle = '#1d1033';
+        ctx.lineWidth = 3;
+        ctx.strokeRect((canvas.width - nameBoxWidth) / 2, 285, nameBoxWidth, 48);
+        
+        ctx.fillStyle = '#ff4d2e';
+        ctx.fillText(nameText, canvas.width / 2, 322);
 
         // 7. Body Text (Legal Proclamation)
         ctx.fillStyle = '#1d1033';
-        ctx.font = '500 21px sans-serif';
+        ctx.font = '500 20px sans-serif';
         ctx.textAlign = 'center';
         
         const lines = [
-          `Be it officially known to all mortal software engineers and venture capitalists that`,
-          `YOU have successfully hunted, cornered, and brutally slaughtered ${killCount} production bugs.`,
+          `for having successfully hunted, cornered, and brutally slaughtered ${killCount} production bugs.`,
           ``,
           `By supreme decree of the Ministry of Delusion, you are hereby granted lifetime immunity`,
           `from writing unit tests, and full bragging rights to call yourself Senior QA Legend on LinkedIn.`,
@@ -249,13 +296,13 @@ export function initPlayground() {
           `* This credential holds exactly $0.00 cash value and will definitely be questioned by HR. *`
         ];
 
-        let startY = 300;
+        let startY = 375;
         lines.forEach((line) => {
           if (line.includes('Senior QA Legend') || line.includes(`${killCount} production bugs`)) {
-            ctx.font = 'bold 21px sans-serif';
+            ctx.font = 'bold 20px sans-serif';
             ctx.fillStyle = '#ff4d2e';
           } else if (line.includes('$0.00 cash value')) {
-            ctx.font = 'italic 16px sans-serif';
+            ctx.font = 'italic 15px sans-serif';
             ctx.fillStyle = '#6b7280';
           } else {
             ctx.font = '500 20px sans-serif';
@@ -320,20 +367,24 @@ export function initPlayground() {
         ctx.fillStyle = '#1d1033';
         ctx.fillText(data.sig2Title.toUpperCase(), 920, 695);
 
-        // 11. Download as High-Resolution PNG
-        canvas.toBlob((blob) => {
-          const url = URL.createObjectURL(blob);
+        // 11. Download as High-Resolution PNG (Instant toDataURL)
+        try {
+          const dataUrl = canvas.toDataURL('image/png');
+          const safeName = currentName.replace(/[^a-zA-Z0-9_-]/g, '_').toUpperCase() || 'HERO';
           const a = document.createElement('a');
-          a.href = url;
-          a.download = `OFFICIAL-DIPLOMA-${killCount}-BUGS.png`;
+          a.href = dataUrl;
+          a.download = `QA-DIPLOMA-${safeName}-${killCount}-BUGS.png`;
           document.body.appendChild(a);
           a.click();
           document.body.removeChild(a);
-          URL.revokeObjectURL(url);
 
           dlBtn.textContent = '🖼️ Diploma Downloaded as PNG! (Frame It)';
-          dlBtn.disabled = true;
-        }, 'image/png');
+          dlBtn.disabled = false;
+        } catch (err) {
+          console.error('Download error:', err);
+          dlBtn.textContent = 'Error saving image. Try again';
+          dlBtn.disabled = false;
+        }
       });
     }
 
@@ -431,19 +482,37 @@ export function initPlayground() {
       cookie.style.display = 'none';
     } else {
       function dismissCookie(e) {
-        burst(e.clientX, e.clientY, ['🍪', '😋', '✨', '💨'], 12);
+        if (e && e.stopPropagation) e.stopPropagation();
+        
+        try {
+          const rect = (e && e.target) ? e.target.getBoundingClientRect() : cookie.getBoundingClientRect();
+          const x = (e && typeof e.clientX === 'number' && e.clientX > 0) ? e.clientX : (rect.left + rect.width / 2);
+          const y = (e && typeof e.clientY === 'number' && e.clientY > 0) ? e.clientY : (rect.top + rect.height / 2);
+          burst(x, y, ['🍪', '😋', '✨', '💨'], 14);
+        } catch (_) {}
+
+        try {
+          sessionStorage.setItem('cookie_eaten', 'true');
+        } catch (_) {}
+
+        cookie.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
         cookie.style.opacity = '0';
+        cookie.style.transform = 'translateX(-50%) translateY(30px)';
         cookie.style.pointerEvents = 'none';
-        sessionStorage.setItem('cookie_eaten', 'true');
+        
         setTimeout(() => {
-          cookie.classList.add('gone');
-          cookie.style.display = 'none';
-        }, 200);
+          cookie.remove();
+        }, 220);
       }
+
       const eat1 = document.getElementById('eat');
       const eat2 = document.getElementById('eat2');
-      if (eat1) eat1.addEventListener('click', dismissCookie);
-      if (eat2) eat2.addEventListener('click', dismissCookie);
+      if (eat1) {
+        eat1.onclick = dismissCookie;
+      }
+      if (eat2) {
+        eat2.onclick = dismissCookie;
+      }
     }
   }
 
