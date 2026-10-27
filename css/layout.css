@@ -240,8 +240,7 @@ footer {
 .f-copy { opacity: 0.85; margin-top: 1.5rem; }
 .f-copy a {
   color: var(--mustard);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
   display: inline;
   margin: 0;
   font-weight: 700;
