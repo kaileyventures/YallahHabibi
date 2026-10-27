@@ -432,22 +432,45 @@
   margin-top: .3rem;
 }
 
-/* Terms & Conditions Details Accordions */
-.terms details {
+/* Terms & FAQ Details Accordions */
+.terms details,
+.faq-block details {
   border: 3px solid var(--ink);
   margin: .6rem 0;
   background: #fff;
+  box-shadow: 3px 3px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-.terms summary {
+.terms details:hover,
+.faq-block details:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.terms summary,
+.faq-block summary {
   cursor: pointer;
   font-weight: 700;
-  padding: .6rem .8rem;
+  padding: .7rem .9rem;
+  user-select: none;
 }
-.terms details[open] summary {
+.terms details[open] summary,
+.faq-block details[open] summary {
   background: var(--mustard);
+  border-bottom: 2px solid var(--ink);
 }
-.terms details p {
-  padding: .6rem .8rem;
+.terms details p,
+.faq-block details p {
+  padding: .8rem .9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+.faq-block details a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.faq-block details a:hover {
+  color: var(--pink);
 }
 
 /* Contact Cards */
