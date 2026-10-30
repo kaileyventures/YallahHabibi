@@ -169,7 +169,7 @@ h1.spin {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
-.block h2 small, .teamh small {
+.block h2 small {
   font-family: 'Caveat', cursive;
   font-size: 1.5rem;
   color: var(--red);

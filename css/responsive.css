@@ -3,11 +3,8 @@
    Mobile styling, touch targets, reduced motion
    ========================================================================== */
 
-.btn, .pick button, .vibebox button, .cookie button, .vibebox input, summary {
+.pick button, .vibebox button, .cookie button, .vibebox input, summary {
   min-height: 44px;
-}
-footer {
-  padding-bottom: 1.5rem;
 }
 
 @media (max-width: 520px) {
@@ -98,7 +95,7 @@ footer {
     margin-bottom: .8rem;
     line-height: 1.15;
   }
-  .block h2 small, .teamh small {
+  .block h2 small {
     display: block !important;
     margin-top: 0.35rem;
     font-size: 1.25rem;
