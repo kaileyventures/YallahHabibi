@@ -54,13 +54,13 @@ YallahHabibi/
 │   ├── variables.css          # Color design tokens, typography, resets & focus ring
 │   ├── layout.css             # News ticker, Hero section, Block shells, Roast footer
 │   ├── components.css         # Method cards, Skill bars, 16-Agent grid, Estimates, Tags, Badges
-│   ├── animations.css         # Squashable bug, Confetti pops, Cookie banner, Easter eggs, Shakes
+│   ├── animations.css         # Squashable bug, Confetti pops, Cookie banner, Modal, Shakes
 │   └── responsive.css         # Mobile viewports, touch targets, safe-areas & fluid auto-fit
 │
 └── js/                        # ⚡ Modular ES6+ JavaScript Layer
     ├── burst.js               # Reusable confetti physics & emoji burst engine
     ├── core.js                # Shy button flee logic, logo spin, estimator & tab guilt
-    ├── playground.js          # Crawling bug mini-game, cookie toast, Konami cheat code
+    ├── playground.js          # Crawling bug mini-game, tiered QA certificates & cookie toast
     ├── quotes.js              # Interactive Polygraph Lie Detector & Confession reaction engine
     ├── vibes.js               # 50 ultra-sarcastic startup pitch roasts (non-repeating deck)
     └── stats.js               # IntersectionObserver-driven smooth number counter
@@ -118,11 +118,7 @@ YallahHabibi/
     </td>
   </tr>
   <tr>
-    <td width="50%">
-      <h4>🕹️ The Cheat Code</h4>
-      <p>Type (or tap on mobile) <code>↑ ↑ ↓ ↓ ← → ← → B A</code> for an instant clown explosion and earthquake screen shake.</p>
-    </td>
-    <td width="50%">
+    <td colspan="2">
       <h4>👀 Tab-Guilt Engine</h4>
       <p>Switch browser tabs and watch the document title and favicon turn into judging eyes (<code>👀</code>) begging you to return.</p>
     </td>

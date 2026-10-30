@@ -49,7 +49,7 @@ The Yallah Habibi web application is an ultra-fast, zero-build, modular static w
 | Design Tokens & Resets | Defines CSS custom properties (`--ink`, `--pink`, `--mustard`, `--mint`, `--paper`, `--red`), base typography, and focus outlines | `css/variables.css` |
 | Macro Layouts | Grid layouts, sticky ticker banner, hero sections, and footer | `css/layout.css` |
 | Micro Components | Neo-brutalist cards, method blocks, tags, buttons, radar pills, badges | `css/components.css` |
-| Motion & Visual FX | Bug animations, keyframes, modal dialog styles, wobble/shake, confetti pop CSS | `css/animations.css` |
+| Motion & Visual FX | Bug animations, keyframes, modal dialog styles, wobble, confetti pop CSS | `css/animations.css` |
 | Viewport Adaptation | Media queries, safe-area insets, fluid grid column adjustments for mobile/tablet | `css/responsive.css` |
 | Core Interactions | Runaway button physics, logo 360-spin, estimator, tab visibility guilt-trip | `js/core.js` |
 | Confetti Engine | Particle explosion generator with velocity and rotation math | `js/burst.js` |
@@ -66,7 +66,7 @@ The Yallah Habibi web application is an ultra-fast, zero-build, modular static w
 
 - **Zero Build Step:** Native browser ES modules loaded via `<script type="module" src="script.js">` in `index.html`.
 - **Stateless Reactive DOM:** Event listeners attach directly to declarative DOM IDs and data-attributes (`data-n`, `data-t`, `data-lie`).
-- **Progressive Enhancement:** Essential content is fully visible and readable without JavaScript; interactive games, counters, and Easter eggs enhance the experience when JS is enabled.
+- **Progressive Enhancement:** Essential content is fully visible and readable without JavaScript; interactive games, counters, and playful micro-interactions enhance the experience when JS is enabled.
 
 ## Layers
 

@@ -10,7 +10,6 @@ import { burst } from './burst.js';
  *     • 25 Bugs: Principal Bug Exorcist & Production Martyr (Supreme)
  *     • Every +10 Bugs beyond: Infinite Escalating QA Godhood
  * - Satirical cookie notice dismissal with session storage
- * - Konami code & tap cheat trigger with screen rumble
  */
 
 export function initPlayground() {
@@ -515,34 +514,4 @@ export function initPlayground() {
       }
     }
   }
-
-  // =========================================================================
-  // Secret Konami Keyboard Code Easter Egg (↑ ↑ ↓ ↓ ← → ← → B A)
-  // =========================================================================
-  let isAnimating = false;
-  function triggerEasterEgg(x, y) {
-    if (isAnimating) return;
-    isAnimating = true;
-    burst(x || window.innerWidth / 2, y || window.innerHeight / 2, ['🤡', '🤡', '🤡', '📉', '💤', '💥'], 35);
-    document.body.classList.add('shake-screen');
-    const prevTitle = document.title;
-    document.title = '🤡 CONGRATULATIONS ON UNLOCKING ABSOLUTELY NOTHING.';
-
-    setTimeout(() => {
-      document.body.classList.remove('shake-screen');
-      document.title = prevTitle;
-      isAnimating = false;
-    }, 4000);
-  }
-
-  const seq = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-  let pos = 0;
-  window.addEventListener('keydown', (e) => {
-    const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-    pos = (k === seq[pos]) ? pos + 1 : (k === seq[0] ? 1 : 0);
-    if (pos === seq.length) {
-      pos = 0;
-      triggerEasterEgg();
-    }
-  });
 }

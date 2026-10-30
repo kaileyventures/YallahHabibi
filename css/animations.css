@@ -402,16 +402,3 @@
 .qa-btn.close {
   background: #fff;
 }
-
-
-/* Screen rumble easter egg */
-body.shake-screen {
-  animation: screen-rumble .5s ease-in-out 3;
-}
-@keyframes screen-rumble {
-  0%, 100% { transform: translate(0, 0); }
-  20% { transform: translate(-6px, 4px) rotate(-0.5deg); }
-  40% { transform: translate(6px, -4px) rotate(0.5deg); }
-  60% { transform: translate(-4px, -2px); }
-  80% { transform: translate(4px, 2px); }
-}
