@@ -222,6 +222,10 @@ npx -y serve .
 <a href="https://t.me/YallahHabibi" target="_blank">
   <img src="https://img.shields.io/badge/TELEGRAM-%40YALLAHHABIBI-26A5E4?style=for-the-badge&logo=telegram&logoColor=FFFFFF&labelColor=1D1033" alt="Telegram" />
 </a>
+&nbsp;&nbsp;
+<a href="https://x.com/yallahxhabibi" target="_blank">
+  <img src="https://img.shields.io/badge/X%20(TWITTER)-%40YALLAHXHABIBI-000000?style=for-the-badge&logo=x&logoColor=FFFFFF&labelColor=1D1033" alt="X (Twitter)" />
+</a>
 
 <br/><br/>
 

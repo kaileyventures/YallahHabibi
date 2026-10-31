@@ -684,3 +684,6 @@
 .mail.tele {
   background: var(--mint);
 }
+.mail.x-link {
+  background: var(--mustard);
+}
