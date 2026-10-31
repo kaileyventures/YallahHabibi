@@ -18,6 +18,7 @@ last_mapped_at: 2026-10-30
 
 - GitHub - Source code hosting and open-source contribution link (`https://github.com/kaileyventures/YallahHabibi` linked in `index.html`, `llms.txt`)
 - Telegram - Direct contact / messaging channel (`https://t.me/YallahHabibi` linked in `index.html`, `llms.txt`)
+- X (Twitter) - Social connection & developer discussions (`https://x.com/yallahxhabibi` linked in `index.html`, `llms.txt`, `README.md`)
 
 ## Data Storage
 
